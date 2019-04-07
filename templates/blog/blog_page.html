@@ -1,0 +1,33 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+
+{% block title %}
+	Post
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/success_stories/success_stories_main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/success_stories/success_stories_page.css' %}">
+	
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<a type="button"  class="btn btn-default" href="{{request.META.HTTP_REFERER}}">Go back</a>
+		<div class="row content">
+			<div class="col-sm-12">
+				<p class="story_title text-center">
+					{{post.name}}
+                    <br/>
+					<span class="counter_on_page">
+                        {{post.created_date|date:"n/j/Y"}}
+						<img class="counter_eye" src="{% static 'img/anim_site_main/eye.png' %}"/>
+						{{post.views_count}}
+					</span>
+				</p>
+				<div class=" container post_content">{{post.content|safe}}</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

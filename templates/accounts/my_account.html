@@ -1,0 +1,29 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+
+{% block title %}
+	My account
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/accounts/update_account.css' %}">
+{% endblock %}
+
+{% block main_menu %}
+    {% include "includes/tabs.html" with active_tab='my_account' %}
+{% endblock %}
+
+{% block body %}
+    <div class="container account_info ">
+        <h2 class="text-center">Update Account Info</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% for form in list_of_forms %}
+                {% include 'includes/form.html' %}
+            {% endfor %}
+            <div class="button text-center">
+            <button type ="submit" class="btn btn-success ">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

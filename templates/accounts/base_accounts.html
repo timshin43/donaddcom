@@ -1,0 +1,24 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+	Sign Up
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/accounts/accounts.css' %}">
+{% endblock %}        
+
+
+
+{% block entire_body %}
+  <div class="container">
+    <h1 class="text-center logo">
+      <a href="{% url 'hom_page' %}">Home Page</a>
+    </h1>
+		{% block account_content %}
+		{% endblock %}
+  </div>
+	
+{% endblock %}

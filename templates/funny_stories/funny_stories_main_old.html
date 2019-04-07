@@ -1,0 +1,94 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+
+{% block title %}
+	Why We like Animals
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/funny_stories/funny_stories_main.css' %}">
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='tab4' %}
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="row content">
+			<div class="col-sm-2 text-center sidenav ">
+                <p>Most popular stories</p>
+                {% for sorted_story in stories_sorted %}
+                    <p>
+						<a href="{% url 'fun_story' sorted_story.pk%}">
+							{{sorted_story.name}}
+						</a>
+					</p>
+                {%endfor%}
+                <hr>
+			</div>
+
+			<div class="col-sm-10 text-center">
+				<div class="row">
+					{% for funny_story in stories %}
+						<div class="col-sm-4 stories_intro">
+							<a href="{% url 'fun_story' funny_story.pk%}">
+								<img class="img-circle fun_main_img" src="{{ funny_story.story_image.url }}"></a>
+							<p>{{funny_story.name}}</p>
+							<p>
+								<img class="counter_eye" src="{% static 'img/anim_site_main/eye.png' %}">
+								{{funny_story.views_count}}
+							</p>
+							<p>
+								{{funny_story.created_date|date:"n/j/Y"}}
+							</p>
+							<p>{{funny_story.short_description}}</p>
+						</div>
+					{% endfor %}
+                </div>
+            </div>
+					{% if stories.has_other_pages %}
+
+							<nav aria-label="Topics pagination" class="mb-4 col-sm-12 paginator_center">
+							<ul class="pagination">
+								{% if stories.has_previous %}
+									<li class="page-item">
+										<a class="page-link" href="?page={{ stories.previous_page_number }}">Previous</a>
+									</li>
+								{% else %}
+									<li class="page-item disabled">
+										<span class="page-link">Previous</span>
+									</li>
+								{% endif %}
+								{% for page_num in stories.paginator.page_range %}
+									{% if stories.number == page_num %}
+										<li class="page-item active">
+											<span class="page-link">
+												{{ page_num }}
+												<span class="sr-only">(current)</span>
+											</span>
+										</li>
+									{% else %}
+										<li class="page-item">
+											<a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+										</li>
+									{% endif %}
+								{% endfor %}
+								{% if stories.has_next %}
+									<li class="page-item next">
+										<a class="page-link" href="?page={{ stories.next_page_number }}">Next</a>
+									</li>
+								{% else %}
+									<li class="page-item disabled next">
+										<span class="page-link">Next</span>
+									</li>
+								{% endif %}
+							</ul>
+						</nav>
+						{% endif %}
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

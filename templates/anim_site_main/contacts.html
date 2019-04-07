@@ -1,0 +1,25 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% block title %}
+	About Us
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/success_stories/success_stories_main.css' %}">
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='contacts' %}
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h2 class="text-center">
+            {{contacts.title}}
+        </h2>
+        <div class="container">
+            {{contacts.content|safe}}
+        </div>
+    </div>
+
+{% endblock %}

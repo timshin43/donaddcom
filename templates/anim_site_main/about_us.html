@@ -1,0 +1,25 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% block title %}
+	About Us
+{% endblock %}
+
+{% block stylesheet %}
+	
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='about_us' %}
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h2 class="text-center">
+            {{about_us.title}}
+        </h2>
+        <div class="container">
+            {{about_us.content|safe}}
+        </div>
+    </div>
+
+{% endblock %}

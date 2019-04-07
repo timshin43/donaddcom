@@ -1,0 +1,57 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% block title %}
+	Reports Page
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" type="text/css" />
+{% endblock %}
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='data' %}
+{% endblock %}
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" type="text/css" />
+        
+
+
+
+{% block body %}
+    <div class="container">
+        <div class="row text-center">
+            <h2>
+                Here we will see reports about donations
+            </h2>
+            <div class="col-sm-6">
+                <div>
+                    <a href="https://plot.ly/~SergeiTimshin/68/?share_key=F3nZwDD0S3CpI4lbLZVhLo" target="_blank" title="Donations Per State" style="display: block; text-align: center;"><img src="https://plot.ly/~SergeiTimshin/68.png?share_key=F3nZwDD0S3CpI4lbLZVhLo" alt="Donations Per State" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+                    <script data-plotly="SergeiTimshin:68" sharekey-plotly="F3nZwDD0S3CpI4lbLZVhLo&link=false" src="https://plot.ly/embed.js" async></script>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <a href="https://plot.ly/~SergeiTimshin/66/?share_key=e56fSO9v2NeQRLHg3O0HuZ" target="_blank" title="Donations Per Country" style="display: block; text-align: center;"><img src="https://plot.ly/~SergeiTimshin/66.png?share_key=e56fSO9v2NeQRLHg3O0HuZ" alt="Donations Per Country" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+                    <script data-plotly="SergeiTimshin:66" sharekey-plotly="e56fSO9v2NeQRLHg3O0HuZ&link=false" src="https://plot.ly/embed.js" async></script>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <a href="https://plot.ly/~SergeiTimshin/62/?share_key=M2RyZOFMXxH96Iia31VrkA" target="_blank" title="Donations Per Day" style="display: block; text-align: center;"><img src="https://plot.ly/~SergeiTimshin/62.png?share_key=M2RyZOFMXxH96Iia31VrkA" alt="Donations Per Day" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+                    <script data-plotly="SergeiTimshin:62" sharekey-plotly="M2RyZOFMXxH96Iia31VrkA&link=false" src="https://plot.ly/embed.js" async></script>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <a href="https://plot.ly/~SergeiTimshin/64/?share_key=6wOfi6I6naB01aZDrwwITx" target="_blank" title="Total Donations" style="display: block; text-align: center;"><img src="https://plot.ly/~SergeiTimshin/64.png?share_key=6wOfi6I6naB01aZDrwwITx" alt="Total Donations" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+                    <script data-plotly="SergeiTimshin:64" sharekey-plotly="6wOfi6I6naB01aZDrwwITx&link=false" src="https://plot.ly/embed.js" async></script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+{% endblock %}

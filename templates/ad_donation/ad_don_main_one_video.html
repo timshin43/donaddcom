@@ -1,0 +1,67 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block title %}
+	Donate watching ad
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/ad_donation/ad_don_main.css' %}">
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'js/ad_donation/ad_donation.js' %}" > </script>
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='tab3' %}
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="row content">
+			<div class="col-sm-12 watch_add text-center">
+				<h4>
+					We do not have any sponsors now and all donations are scores, not real money. We will greatly appreciate if you watch
+					social ad and click donate. We will show our sponsors that people are interested in our idea and it will help us
+					rise fund
+				</h4>
+				<h2>Donate watching ad</h2>
+				<div class="watch_ad">
+					<div class="watch_ad-icon">
+						<strong>
+							Watch the video first
+						</strong>
+                        <br/>
+                        <img class="icons" src="{% static 'img/anim_site_main/watch_ad.png' %}" alt="Image">
+                        <br/>
+                        <img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
+					</div>
+					{% video video.video 'small' %}
+				</div>
+				{% csrf_token %}
+                <div id="donate_arrows" class="watch_ad-icon invisible">
+						<strong>
+							Press Donate
+						</strong>
+                        <br/>
+                        <img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
+                </div>
+                <div id="next_video_arrows" class="watch_ad-icon hidden">
+                    <strong>
+                        Watch the next video
+                    </strong>
+                    <br/>
+                    <img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
+                </div>
+				<a id="donate" class="btn btn-success invisible">DONATE</a>
+				<a id="next_video" class="btn btn-primary hidden" href="{% url 'add_donation' %}">Next Video</a>
+                <div id="you_just_donated" class="big_font invisible">
+                    You just earned $ 0.03!! Total money :
+                </div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

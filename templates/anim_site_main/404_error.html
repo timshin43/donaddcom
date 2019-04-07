@@ -1,0 +1,22 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% block title %}
+	Data
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/anim_site_main/homepage.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <h2 class="text-center data_title">
+        404 Error
+        <p>
+            Whooops, this page is not here. Maybe I ate it.
+        </p>
+        <img class="img_links" src="{% static 'img/anim_site_main/404_error.png' %}">
+    </h2>
+
+
+{% endblock %}

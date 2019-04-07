@@ -1,0 +1,15 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% block title %}
+	Donations
+{% endblock %}
+
+
+
+{% block body %}
+    <div class="container">
+        {% for user in all_users %}
+            {{user.app_user.country}}
+        {% endfor %}
+    </div>
+{% endblock %}

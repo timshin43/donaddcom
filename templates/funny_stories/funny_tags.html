@@ -1,0 +1,22 @@
+{% extends 'stories/stories_main.html' %}
+{% load static %}
+
+{% block title %}
+	Funny stories Tags
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='funny' %}
+{% endblock %}
+
+{% block page_name %}
+	<p class="story_title text-center">{{tag.name}}</p>
+{% endblock %}
+
+{% block url %}
+    {% url 'fun_story' story.pk%}
+{% endblock %}
+
+{%block sort_url%}
+    {% url 'fun_story' sorted_story.pk%}
+{%endblock%}

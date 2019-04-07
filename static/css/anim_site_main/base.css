@@ -1,0 +1,43 @@
+body{
+    font-family:"Verdana";
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+
+
+footer.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+	background-color: #2f2f2f;
+    color: #ffffff;
+    height:100%;
+}
+
+
+
+.don_amount{
+	padding-right:15px;
+}
+
+#site_logo{
+    max-height:100px;
+    max-width:100px;
+}
+
+.content {
+	min-height:500px;
+	font-size:16px;
+}
+
+
+
+

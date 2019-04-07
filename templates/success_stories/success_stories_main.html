@@ -1,0 +1,26 @@
+{% extends 'stories/stories_main.html' %}
+{% load static %}
+
+{% block title %}
+	Success stories
+{% endblock %}
+
+{%load i18n %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='success' %}
+{% endblock %}
+
+{% block url %}
+    {% url 's_story' story.pk%}
+{% endblock %}
+
+{%block sort_url%}
+    {% url 's_story' sorted_story.pk%}
+{%endblock%}
+
+{% block page_name %}
+    <h4 class="text-center">
+        {% trans "Success stories about rescued animals" %}
+    </h4>
+{% endblock %}

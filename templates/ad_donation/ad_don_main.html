@@ -1,0 +1,54 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block title %}
+	Donate watching ads
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/success_stories/success_stories_page.css' %}">
+	<link rel="stylesheet" href="{% static 'css/ad_donation/ad_don_main.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'css/success_stories/success_stories_main.css' %}"> -->
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'js/ad_donation/ad_donation.js' %}" > </script>
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='tab3' %}
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+			<div class="col-sm-12 text-center">
+				<div class="row">
+					{% for project in all_projects %}
+						<div class="col-sm-4 stories_intro">
+							<h4 class="proj_name">{{project.name}}</h4>
+							<p>
+								{{project.created_date|date:"n/j/Y"}}
+							</p>
+							<a href= "{% url 'donate_project' project.pk%}">
+								<img class="img-rounded suc_main_img" src="{{ project.project_image.url }}">
+							</a>
+							<div class="container-fluid progress" style="width:300px">
+								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0"
+								aria-valuemin="0" aria-valuemax="50" style="width:{{project.percentage_donated}}%">
+									<span class="label_progress">{{project.percentage_donated}}%</span>
+								</div>
+							</div>
+							<p>
+								Project needs: {{ project.amount_required }}
+							</p>
+
+							<div class="short_description">{{project.short_description|truncatechars:150}}</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

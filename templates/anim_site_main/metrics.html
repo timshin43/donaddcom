@@ -1,0 +1,58 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{% block title %}
+	Google Analytics
+{% endblock %}
+
+{% block stylesheet %}
+
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='data' %}
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container text-center">
+    <h2 class="text-center">
+        Web Site`s Google Analytics Data
+        <span class="hidden" id="token">{{token}}</span>
+    </h2>
+    <h4>
+        Here you can track the dynamic of this website
+    </h4>
+
+    <!-- Step 1: Create the containing elements. -->
+    <div class="row">
+        <section id="auth-button"></section>
+        <div class="col-sm-12">
+            <section id="timeline"></section>
+            <section id="timeline-range"></section>
+
+        </div>
+        <div class="col-sm-12">
+            <section id="session_map"></section>
+        </div>
+        <div class="col-sm-12">
+            <section id="session_duration_line"></section>
+        </div>
+        <div class="col-sm-12">
+            <section id="page_views"></section>
+        </div>
+
+    </div>
+        <script src="{% static 'js/anim_site_main/google_analytics.js' %}" > </script>
+    </div>
+
+
+
+
+
+{% endblock %}
+</body>
+</html>

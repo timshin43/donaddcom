@@ -1,0 +1,22 @@
+{% extends 'stories/stories_main.html' %}
+{% load static %}
+
+{% block title %}
+	Success stories Tags
+{% endblock %}
+
+{% block main_menu %}
+	  {% include "includes/tabs.html" with active_tab='success' %}
+{% endblock %}
+
+{% block page_name %}
+	<p class="story_title text-center">{{tag.name}}</p>
+{% endblock %}
+
+{% block url %}
+    {% url 's_story' story.pk%}
+{% endblock %}
+
+{%block sort_url%}
+    {% url 's_story' sorted_story.pk%}
+{%endblock%}

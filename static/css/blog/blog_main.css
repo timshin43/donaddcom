@@ -1,0 +1,28 @@
+.content {
+	min-height:500px;
+
+}
+
+.blog{
+    width:60%;
+    max-width: 1100px;
+
+}
+
+.post_description{
+    opacity: 0.9;
+}
+
+.post_title{
+    margin-bottom: 20px;
+}
+
+
+.container-fluid{
+    position:relative;
+}
+
+.paginator_center{
+    bottom: 0;
+    margin: auto;
+}

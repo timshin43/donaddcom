@@ -1,0 +1,62 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{%load i18n %}
+{% block title %}
+Need title
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/success_stories/success_stories_main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/success_stories/success_stories_page.css' %}">
+	
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="row content">
+			<div class="col-sm-2 text-center sidenav ">
+				<p>{% trans "Most popular stories" %}</p>
+                {% for sorted_story in stories_sorted %}
+                    <p>
+                        <a href="{% url 's_story' sorted_story.pk%}">
+                            {{sorted_story.name}}{{success_story.views_count}}
+                         </a>
+                    </p>
+                {%endfor%}
+                <hr>
+			</div>
+			<a href="{{request.META.HTTP_REFERER}}">Go back</a>
+			<div class="col-sm-10">
+				<p class="story_title text-center">
+					{{story.name}}
+                    <br/>
+					<span class="counter_on_page">
+                        {{story.created_date|date:"n/j/Y"}}
+						<img class="counter_eye" src="{% static 'img/anim_site_main/eye.png' %}"/>
+						{{story.views_count}}
+					</span>
+				</p>
+
+
+				<p>{{story.content|safe}}</p>
+				<p>
+					<strong>{% trans "Tags: " %}</strong>
+					{%for tag in related_tags%}
+						<a href="{% url 'tags' tag.pk%}">{{tag.name}}</a>,
+					{%endfor%}
+				</p>
+				<p>
+					<strong>{% trans "Featured Stories: " %}</strong>
+                    <br>
+					{%for feat_story in featured_stories%}
+                        <a href="{% url 's_story' feat_story.pk%}">
+                            <img class="img-circle feat_stor_img" src="{{ feat_story.story_image.url }}">
+                            {{feat_story.name}}
+                        </a>
+					{%endfor%}
+				</p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

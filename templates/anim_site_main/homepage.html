@@ -1,0 +1,71 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+{%load i18n %}
+
+{% block title %}
+	Donadd
+{% endblock %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/anim_site_main/homepage.css' %}">
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid bg-1 text-center">
+		<h2>{% trans "What we do?" %}</h2>
+		
+		<img class="img-circle" src="{% static 'img/anim_site_main/green_eye_cat.jpg' %}">
+		<h3>{% trans "We try to help stray animals all around the World" %}</h3>
+	</div>
+
+	<div class="container-fluid bg-3 text-center">
+        <h2>{% trans "Donate your time" %}</h2>
+        <h3 class="container-fluid description">{% trans "How much time do we spend on things that are not worth our attention? But did you know that every minute costs some money? Our mission is to convert time into a real profit and direct it to help stray animals. Even one minute of your time can safe someone`s life. We do not ask to donate money. You can simply donate a couple minutes of your time!" %}
+		</h3>
+        <h3>{% trans "How it works?" %}</h3>
+		<div  class="row section_with_icons">
+			<div class="col-sm-2 text-center">
+				<h4>{% trans "Choose a project" %}</h4>
+				<img class="icons" src="{% static 'img/anim_site_main/watch_ad.png' %}" alt="Image">
+			</div>
+            <div class="col-sm-3 text-center">
+				<img class="icons arrow" src="{% static 'img/anim_site_main/arrow.png' %}" alt="Image">
+			</div>
+            <div class="col-sm-2 text-center">
+                <h4>{% trans "Watch a video" %}</h4>
+				<img class="icons" src="{% static 'img/anim_site_main/help-donate.png' %}" alt="Image">
+			</div>
+
+            <div class="col-sm-3 text-center">
+				<img class="icons arrow" src="{% static 'img/anim_site_main/arrow.png' %}" alt="Image">
+			</div>
+            <div class="col-sm-2 text-center">
+                <h4>{% trans "Click Donate" %}</h4>
+				<img class="icons" src="{% static 'img/anim_site_main/bw-trends.png' %}" alt="Image">
+			</div>
+		</div>
+	</div>
+
+    <div class="container-fluid bg-1 text-center">
+        <h2>{% trans "Explore More" %}</h2>
+		<div class="row section_with_icons">
+			<div class="col-sm-4">
+				<h4>{% trans "About Us" %}</h4>
+				<a href="{%url 'about_us'%}">
+					<img class="img-circle img_links" src="{% static 'img/anim_site_main/about_us.jpg' %}" alt="Image">
+				</a>
+			</div>
+			<div class="col-sm-4 ">
+				<h4>{% trans "Check Statistic" %}</h4>
+				<a href="{%url 'data'%}" >
+					<img class="img-circle img_links" src="{% static 'img/anim_site_main/Curious monkey.jpg' %}" alt="Image">
+				</a>
+			</div>
+			<div class="col-sm-4">
+				<h4>{% trans "Donate" %}</h4>
+				<a href="{%url 'add_donation'%}">
+					<img class="img-circle img_links" src="{% static 'img/anim_site_main/Dog_and_bread.jpg' %}" alt="Image">
+				</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

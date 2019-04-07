@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "chromatic-force-214123",
+  "private_key_id": "9171969eb23d17498f89cfc6c465513e2eb229b4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCba3iUUxMHVb1K\nDfbGmjX2f0UkROGh3HcGLsMIc7Cw1rNu+mP1x/LQY3NgFqAMkwqEvjKUd8A42BuV\neMafNOjGfBQZa+sTFCDjYa8zQj6xYxlhGQ63hS5Ww7xFjVHKHrnXYhZGYSP4S8vp\nZYd7qJNKdoFY4UencudjwbOob6Bkd0P0RQ9v/LDLZuElOYVJXQPqRGjoseBArIq7\nodCPXEfYLp0ad1GNxAMDVUm59fc1A90+2WQwiQeTUlJY5zmypyJ1YMMbg/XGyeQq\n9yVon6RpBypBnoYZUglUnKr4D1EBksqDdVBugv1Drq9EobO0O73NaeCquLK+uBtD\nOFASAZl/AgMBAAECggEAFEGKCh7XrI2OqZ+vSYwgu1s0CjmWBLAErUAb+DaH0Uxy\nP2UP8SEZsvI7P8tDGdByPwHA+tuuqFn2ImGG1YoiSngycGvBzA9ECA6btH0OSbVG\nQgLviZiohPNmztPP1J1zkDA/AfY4J2zNi0JJyaKba8mNKyXVXmwZ30UIIsxFpcI3\ni+OGB8oDvR1Wsxd2xdafRI2crpuVQtm0rENDY9iwd06dZnb0hF3GlD2cMgFhK+Fw\ntbyifZ4+nOXYhwmOYGpX0RNcXmRqyAJVDX9n7JaMhOxhdGgi1B8hmG3QUj+49EEq\nYj+ZOE93qbE6pvM3J0Wgm1b8i3Zc7x1fswObPFLOlQKBgQDNEoSvcWhWTtkwQPw8\n3OkJsdy0tmG5vLMpXIhIJ26mkHx/48mcY7j6MY24cC4EPhC+NHcPboFjwUVzTBpX\n20YrcPHvBne2sVwEzuQhCMtyY0+HyR38tYcVXhSaBaQG8C/fQu7EhMa6FQPIVZMT\nEpWmB79cMG8jCdmYoArXSZCnGwKBgQDCBEqTPGyJJeOb/Rh/Ru6d6xzX7kUvVD7t\nl94JAnU9p8+0Xx07QuFrwRhIPqElWoaq1iI+3wzNlM4dFEK7Y5P4GUXMpEmEf95x\nYpB24ULFd5D9g9QaybYhozLwrlKtQjiYZiAH1Qja3MJb+z6UFr0CctKT3pbQxmDQ\n8NqnUMeJbQKBgQDLGdsVk0EdsavC8amfcb7PXjtTMwpolO3wOfezVnJtPs4/L0++\ntrk9+ZP9pgS9KOcWKgn825oEPSdWgHnap43AenTyITqxUsjq7ijcWsR7vsXGmrY7\nUWG/FNVckdeZE4qmGLk3IrVbGHMNl0s5aX+S1zt7x3BaiGfclC0IeZBtHwKBgBvp\nKiFMTADe5oOGQYPt3F3zeM7HhERuxi6/7j01kVAxV/wGwtnHoU4zFR8vg1cwUrc4\n3uxUgi8A/TXJuF/kz2CdoiDycXESRBnjqAyyEzz9GmqeEGFaK01jgOyG53XtVN73\nshvuVbvGjl9VIYeETeSQSCLlnqSiJUNposr3H/1xAoGBAKCc+kl4tKiHHJcX+u8S\nG/S2/3zQ+TnlPGoVgTodtT9rfB4WyL2onhShaq7LdMk+6uvrmE2/AfPM985R8fnh\nBXqdbwxPOJmAAYODJ+StCjviOfcTJrudDVkPd07tspxGVM8xQPSKnSEwTTrij9Jv\nKkd9/DgKrp2lYOKZyJoauEUw\n-----END PRIVATE KEY-----\n",
+  "client_email": "zabugrom@chromatic-force-214123.iam.gserviceaccount.com",
+  "client_id": "114460866282751273139",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/zabugrom%40chromatic-force-214123.iam.gserviceaccount.com"
+}
