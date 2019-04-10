@@ -1,1 +1,1 @@
-web: gunicorn locallibrary.wsgi --log-file - 
+web: gunicorn anim_website.wsgi --log-file - 
