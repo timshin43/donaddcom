@@ -112,3 +112,4 @@ dmypy.json
 # csv 
 all_donations.csv
 all_users.csv
+settings_localhost.py
