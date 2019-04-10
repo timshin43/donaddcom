@@ -1,0 +1,19 @@
+.story_title{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.feat_stor_img {
+    height:90px;
+}
+
+.counter_on_page{
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.counter_on_page img{
+    margin-left:10px;
+}
