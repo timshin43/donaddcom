@@ -34,11 +34,11 @@
                 <li><a href="{% url 'login' %}">{% trans "Login" %}</a></li>
             {% endif %}
             {% if user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
+                <li><a href="{% url 'my_account' %}">{% trans "My account" %}</a></li>
             {% endif %}
             <li><a href="{% url 'password_reset' %}">{% trans "Reset Password" %}</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'my_account' %}">{% trans "My account" %}</a></li>
+			{% if user.is_authenticated %}
+				<li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
             {% endif %}
         </ul>
     </li>
