@@ -199,7 +199,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-
+DEFAULT_FILE_STORAGE = 'anim_website.storage_backends.MediaStorage'
 
 #MEDIA SETTINGS
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
