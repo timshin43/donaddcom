@@ -1214,11 +1214,11 @@ msgstr "Вы только что заработали $ 0.15!! Общая сум
 
 #: .\templates\anim_site_main\homepage.html:14
 msgid "What we do?"
-msgstr "Чем мы занимаемся?"
+msgstr "Для чего этот проект?"
 
 #: .\templates\anim_site_main\homepage.html:17
 msgid "We try to help stray animals all around the World"
-msgstr "Мы помогаем Бездомным животным по всему Миру"
+msgstr "Чтобы помочь бездомным животным по всему Миру!"
 
 #: .\templates\anim_site_main\homepage.html:21
 msgid "Donate your time"
@@ -1232,11 +1232,12 @@ msgid ""
 "of your time can safe someone`s life. We do not ask to donate money. You can "
 "simply donate a couple minutes of your time!"
 msgstr ""
-"Как много времени вы уделяете вещам,которые не заслуживают вашего внимани? А "
-"знаете ли Вы, что каждая минута вашего времени стоит денег? Наша миссия "
+"Как много времени порой мы уделяете вещам,которые не заслуживают вашего внимани? А "
+"знаете ли Вы, что каждая минута вашего времени стоит денег? Наша миссия: "
 "перевести время в реальные деньги и направить их на помощь животным, которые "
-"нуждаются в помощи. Даже одна минута Вашего времени важна и может спасти чью-"
-"то жизнь"
+"нуждаются в ней. Даже одна минута Вашего времени может спасти чью-"
+"то жизнь. Теперь можно помогать финансово не тратя ваши личные деньги!"
+
 
 #: .\templates\anim_site_main\homepage.html:24
 msgid "How it works?"
@@ -1252,7 +1253,7 @@ msgstr "Смотрите видео"
 
 #: .\templates\anim_site_main\homepage.html:42
 msgid "Click Donate"
-msgstr "Действовать!"
+msgstr "Вы помогли!"
 
 #: .\templates\anim_site_main\homepage.html:49
 msgid "Explore More"

@@ -38,7 +38,7 @@
 					{{user.username}},
 				{% endif %}
 				{% get_current_language as LANGUAGE_CODE %}
-				We collected: $<span id="don_amount">{{don_from_users}}</span>, {{LANGUAGE_CODE}} 
+				We collected: $<span id="don_amount">{{total_don_from_users}}</span>, {{LANGUAGE_CODE}} 
 				
 				<form action= "{% url 'set_language' %}" method = "post" > {% csrf_token %}
 					<input type = "hidden" name = "text" value = "{{redirect_to}}"/>

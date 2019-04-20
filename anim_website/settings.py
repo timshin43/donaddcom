@@ -177,7 +177,7 @@ AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 AWS_LOCATION = 'staticfiles'
-# AWS_DEFAULT_ACL= None
+AWS_DEFAULT_ACL= None
 
 
 # Static files (CSS, JavaScript, Images)
@@ -194,9 +194,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 DEFAULT_FILE_STORAGE = 'anim_website.storage_backends.MediaStorage'

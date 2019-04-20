@@ -16,8 +16,8 @@ $(document).ready(function(){
 				'video_pk':$("#video_pk").html()
             },
             success: function(result){
-                    $("#don_amount").html(result.don_from_users);
-                    $("#you_just_donated").html(" You just earned $ 0.15!! Money remained: $"+result.don_from_users);
+                    $("#don_amount").html(result.total_don_from_users);
+                    $("#you_just_donated").html(" You just earned $ 0.15!! Money remaine: $"+result.don_from_users);
                     $("#donate").addClass("hidden");
                     $("#donate_arrows").addClass("hidden");
                     $("#next_video").removeClass("hidden");

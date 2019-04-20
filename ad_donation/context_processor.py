@@ -12,6 +12,6 @@ def total_donation(request):
 		don_from_users = don_from_users + don.amount
 	return {
 		#'total_donation': Total_donation.objects.get(name="main_total_donation"),
-		'don_from_users': round(don_from_users, 2),
+		'total_don_from_users': round(don_from_users, 2),
 		'lang':lang
 	}

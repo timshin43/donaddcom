@@ -29,10 +29,6 @@ def donate(request,donat_project_pk):
 	video = get_object_or_404(Video,pk=request.GET['video_pk'])
 	video.views_count += 1
 	video.save()
-	# all_donation_user = Donations.objects.all()
-	# don_from_users = 0
-	# for don in all_donation_user:
-		# don_from_users = don_from_users + don.amount
 		
 	project_donations = round(sum(donation_project.project_donation.all().values_list('amount',flat=True).order_by("pk")),2)
 	donation_project.amount_donated = project_donations
@@ -46,7 +42,12 @@ def donate(request,donat_project_pk):
 	donation_project.amount_donated = project_donations	
 	donation_project.percentage_donated = project_progress	
 	donation_project.save()
-	data = { "don_from_users": round(donation_left,2),"project_progress":project_progress,"project_donations":project_donations }
+	all_donation_user = Donations.objects.all()
+	total_don_from_users = 0
+	for don in all_donation_user:
+		total_don_from_users = total_don_from_users + don.amount
+	data = { "don_from_users": round(donation_left,2),"project_progress":project_progress,
+	"project_donations":project_donations,"total_don_from_users":round(total_don_from_users,2)}
 	# return redirect('add_donation')
 	return JsonResponse(data)
 
@@ -76,10 +77,12 @@ def donate_project(request,donat_project_pk):
 		project_progress = round(project_donations/project.amount_required*100,1)
 	else:
 		project_progress = 0
+	donation_left = project.amount_required-project_donations
 	return render(request, "ad_donation/donation_project_detail.html", {"project": project, "video":video,
 																		"project_progress":project_progress,
 																		"amount_required":round(project.amount_required,2),
-																		"project_donations":round(project_donations,2)
+																		"project_donations":round(project_donations,2),
+																		"don_from_users":donation_left,
 																	 })
 
 

@@ -11,13 +11,13 @@
         <!--<a href="{% url 'funny_main' %}">Funny</a>-->
     <!--</li>-->
 
-    <li class="dropdown {% if active_tab == 'data' %} active{% endif %}">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Data" %}</a>
-        <ul class="dropdown-menu">
-            <li><a href="{% url 'metrics' %}">{% trans "Website`s Data" %}</a></li>
-            <li><a href="{% url 'data_analysis' %}">{% trans "Statistic" %}</a></li>
-        </ul>
-    </li>
+    <!-- <li class="dropdown {% if active_tab == 'data' %} active{% endif %}"> -->
+        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Data" %}</a> -->
+        <!-- <ul class="dropdown-menu"> -->
+            <!-- <li><a href="{% url 'metrics' %}">{% trans "Website`s Data" %}</a></li> -->
+            <!-- <li><a href="{% url 'data_analysis' %}">{% trans "Statistic" %}</a></li> -->
+        <!-- </ul> -->
+    <!-- </li> -->
 
     <li class="{% if active_tab == 'tab3' %} active{% endif %}">
         <a href="{% url 'add_donation' %}">{% trans "Donate" %}</a>
