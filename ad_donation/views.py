@@ -6,7 +6,8 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import ensure_csrf_cookie
 import random
-
+from datetime import datetime, timedelta
+from django.utils import timezone
 
 # Create your views here.
 @login_required
@@ -46,6 +47,11 @@ def donate(request,donat_project_pk):
 	total_don_from_users = 0
 	for don in all_donation_user:
 		total_don_from_users = total_don_from_users + don.amount
+		
+	if request.user.app_user.view_count == 0:
+		request.user.app_user.view_count_expire=datetime.now()+timedelta(hours=24)
+	request.user.app_user.view_count +=1
+	request.user.app_user.save()
 	data = { "don_from_users": round(donation_left,2),"project_progress":project_progress,
 	"project_donations":project_donations,"total_don_from_users":round(total_don_from_users,2)}
 	# return redirect('add_donation')
@@ -60,12 +66,20 @@ def donate_test(request):
 	
 def donate_main(request):
 	all_projects = Project_for_donations.objects.all().order_by('created_date')
+
 	return render(request, "ad_donation/ad_don_main.html", {"all_projects": all_projects,
 																	 })
 																	 
 def donate_project(request,donat_project_pk):
 	project = get_object_or_404(Project_for_donations, pk=donat_project_pk)
 	current_lang = request.LANGUAGE_CODE
+	if request.user.is_anonymous() != True:
+		if request.user.app_user.view_count_expire < timezone.now():
+			request.user.app_user.view_count=0
+		request.user.app_user.save()
+		time_delta = request.user.app_user.view_count_expire-timezone.now().replace(microsecond=0)
+	else:
+		time_delta=0
 	try:
 		ids_list = project.project_video.filter(language=current_lang).values_list('pk',flat=True).order_by("pk")
 		rand_id = random.choice(ids_list)
@@ -83,6 +97,7 @@ def donate_project(request,donat_project_pk):
 																		"amount_required":round(project.amount_required,2),
 																		"project_donations":round(project_donations,2),
 																		"don_from_users":donation_left,
+																		"time_delta":time_delta,
 																	 })
 
 
