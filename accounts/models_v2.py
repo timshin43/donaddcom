@@ -68,8 +68,8 @@ class AppUser(models.Model):
 	#all fields below remained from the previous business logic. Now we do not need them but let them be just in case
     user = models.OneToOneField(User, related_name='app_user', on_delete=models.CASCADE)
     country = CountryField(blank=True)
-    # view_count=models.PositiveIntegerField(default=0)
-    # view_count_expire = models.DateTimeField(blank=True, default=timezone.now())
+    view_count=models.PositiveIntegerField(default=0)
+    view_count_expire = models.DateTimeField(blank=True, default=timezone.now())
     state = models.CharField(max_length=25, choices=STATES_CHOICE, blank=True, default='NAN')
     birth_date = models.DateTimeField(blank=True, default=timezone.now())
 

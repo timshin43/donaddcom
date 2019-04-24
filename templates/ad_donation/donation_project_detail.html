@@ -36,58 +36,54 @@
 				
 				{% if user.is_authenticated %}
 					{% if don_from_users >= 0 %}
-						{% if user.app_user.view_count < 10 %}
-							<div class="watch_ad">
-								<div class="watch_ad-icon">
-									<strong>
-										{% trans "Watch the video first" %}
-									</strong>
-									<br/>
-									<img class="icons" src="{% static 'img/anim_site_main/watch_ad.png' %}" alt="Image" />
-									<br/>
-									<img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image" />
-									<h3>
-										<a href = "{{video.link}}" target="_blank">{{ video.company_name }} </a>
-									</h3>
-								</div>
-								
-								{% video video.video 'small' %}
-								<span id ="video_pk" class="hidden" >{{video.pk}}</span>
+						<div class="watch_ad">
+							<div class="watch_ad-icon">
+								<strong>
+									{% trans "Watch the video first" %}
+								</strong>
+								<br/>
+								<img class="icons" src="{% static 'img/anim_site_main/watch_ad.png' %}" alt="Image" />
+								<br/>
+								<img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image" />
+								<h3>
+									<a href = "{{video.link}}" target="_blank">{{ video.company_name }} </a>
+								</h3>
 							</div>
 							
+							{% video video.video 'small' %}
+							<span id ="video_pk" class="hidden" >{{video.pk}}</span>
+						</div>
+						
+							
+						{% csrf_token %}
 								
-							{% csrf_token %}
-									
-							<h3>Project Progress</h3>
-							<div class="container-fluid progress" style="width:300px">
-								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0"
-								aria-valuemin="0" aria-valuemax="50" style="width:{{project_progress}}%">
-									<span class="label_progress">{{project_progress}}%</span>
-								</div>
+						<h3>Project Progress</h3>
+						<div class="container-fluid progress" style="width:300px">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0"
+							aria-valuemin="0" aria-valuemax="50" style="width:{{project_progress}}%">
+								<span class="label_progress">{{project_progress}}%</span>
 							</div>
-							<span id="donated">{{project_donations}}</span>/{{amount_required}}
-							<div id="donate_arrows" class="watch_ad-icon invisible">
-									<strong>
-										{% trans "Press Donate" %}
-									</strong>
-									<br/>
-									<img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
-							</div>
-							<div id="next_video_arrows" class="watch_ad-icon hidden">
+						</div>
+						<span id="donated">{{project_donations}}</span>/{{amount_required}}
+						<div id="donate_arrows" class="watch_ad-icon invisible">
 								<strong>
-									{% trans "Watch the next video" %}
+									{% trans "Press Donate" %}
 								</strong>
 								<br/>
 								<img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
-							</div>
-							<a id="donate" class="btn btn-success">{% trans "DONATE" %}</a>
-							<a id="next_video" class="btn btn-primary hidden" href="{% url 'donate_project' project.pk %}">{% trans "Next Video" %}</a>
-							<div id="you_just_donated" class="big_font invisible">
-								{% trans "You just earned $ 0.15!! Money remained: $" %}
-							</div>
-						{% else %}
-							<h1>Each user has only 10 videos per day and you ran out of shoots for today. You could continue to help after {{time_delta}} </h1>
-						{%endif%}
+						</div>
+						<div id="next_video_arrows" class="watch_ad-icon hidden">
+							<strong>
+								{% trans "Watch the next video" %}
+							</strong>
+							<br/>
+							<img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
+						</div>
+						<a id="donate" class="btn btn-success">{% trans "DONATE" %}</a>
+						<a id="next_video" class="btn btn-primary hidden" href="{% url 'donate_project' project.pk %}">{% trans "Next Video" %}</a>
+						<div id="you_just_donated" class="big_font invisible">
+							{% trans "You just earned $ 0.15!! Money remained: $" %}
+						</div>
 					{%else%}
 						<h4>Project is fully funded</h4>
 					{%endif%}
