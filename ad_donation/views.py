@@ -72,6 +72,13 @@ def donate_main(request):
 def donate_project(request,donat_project_pk):
 	project = get_object_or_404(Project_for_donations, pk=donat_project_pk)
 	current_lang = request.LANGUAGE_CODE
+	if request.user.is_anonymous() != True:
+		if request.user.app_user.view_count_expire < timezone.now():
+			request.user.app_user.view_count=0
+			request.user.app_user.save()
+		time_delta = request.user.app_user.view_count_expire-timezone.now().replace(microsecond=0)
+	else:
+		time_delta=0	
 	try:
 		ids_list = project.project_video.filter(language=current_lang).values_list('pk',flat=True).order_by("pk")
 		rand_id = random.choice(ids_list)
