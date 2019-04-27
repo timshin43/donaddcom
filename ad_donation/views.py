@@ -6,7 +6,8 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import ensure_csrf_cookie
 import random
-
+from datetime import datetime, timedelta
+from django.utils import timezone
 
 # Create your views here.
 @login_required
@@ -46,6 +47,11 @@ def donate(request,donat_project_pk):
 	total_don_from_users = 0
 	for don in all_donation_user:
 		total_don_from_users = total_don_from_users + don.amount
+		
+	if request.user.app_user.view_count == 0:
+		request.user.app_user.view_count_expire=datetime.now()+timedelta(hours=24)
+	request.user.app_user.view_count +=1
+	request.user.app_user.save()
 	data = { "don_from_users": round(donation_left,2),"project_progress":project_progress,
 	"project_donations":project_donations,"total_don_from_users":round(total_don_from_users,2)}
 	# return redirect('add_donation')
