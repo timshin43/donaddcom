@@ -96,6 +96,7 @@ def donate_project(request,donat_project_pk):
 																		"amount_required":round(project.amount_required,2),
 																		"project_donations":round(project_donations,2),
 																		"don_from_users":donation_left,
+																		"time_delta":time_delta,
 																	 })
 
 
