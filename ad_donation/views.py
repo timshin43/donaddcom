@@ -76,7 +76,7 @@ def donate_project(request,donat_project_pk):
 		if request.user.app_user.view_count_expire < timezone.now():
 			request.user.app_user.view_count=0
 			request.user.app_user.save()
-		time_delta = request.user.app_user.view_count_expire-timezone.now().replace(microsecond=0)
+		time_delta = request.user.app_user.view_count_expire.replace(microsecond=59)-timezone.now().replace(microsecond=59)
 	else:
 		time_delta=0	
 	try:
