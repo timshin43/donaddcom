@@ -36,7 +36,7 @@
 				
 				{% if user.is_authenticated %}
 					{% if don_from_users >= 0 %}
-						{% if user.app_user.view_count < 2 %}
+						{% if user.app_user.view_count < 9 %}
 							<div class="watch_ad">
 								<div class="watch_ad-icon">
 									<strong>
@@ -78,7 +78,7 @@
 								<br/>
 								<img class="arrow_down" src="{% static 'img/anim_site_main/arrow-down.png' %}" alt="Image">
 							</div>
-							<a id="donate" class="btn btn-success">{% trans "DONATE" %}</a>
+							<a id="donate" class="btn btn-success invisible">{% trans "DONATE" %}</a>
 							<a id="next_video" class="btn btn-primary hidden" href="{% url 'donate_project' project.pk %}">{% trans "Next Video" %}</a>
 							<div id="you_just_donated" class="big_font invisible">
 								{% trans "You just earned $ 0.15!! Money remained: $" %}
