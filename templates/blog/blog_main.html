@@ -28,9 +28,9 @@
                     <p class="post_title">
                         <strong><a href="{% url 'blog_post' post.pk %}">{{post.name}}, {{post.created_date|date:"n/j/Y"}}</a></strong>
                         <br/>
-                        <span class="post_description">
-                            {{post.short_description}}
-                        </span>
+                        <!-- <span class="post_description"> -->
+                            <!-- {{post.short_description}} -->
+                        <!-- </span> -->
                     </p>
                     {% endfor %}
                 </div>
