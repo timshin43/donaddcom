@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-04 14:54-0400\n"
+"POT-Creation-Date: 2019-06-15 11:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,17 @@ msgstr ""
 "10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
 "100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: .\templates\ad_donation\ad_don_main.html:44
+msgid "Project needs"
+msgstr "Проекту требуется"
+
 #: .\templates\ad_donation\donation_project_detail.html:43
-#, fuzzy
-#| msgid "Watch a video"
 msgid "Watch the video first"
 msgstr "Смотрите видео"
+
+#: .\templates\ad_donation\donation_project_detail.html:59
+msgid "Project`s Progress"
+msgstr "Прогресс"
 
 #: .\templates\ad_donation\donation_project_detail.html:69
 #, fuzzy
@@ -68,14 +74,12 @@ msgid "Log in"
 msgstr "Войти"
 
 #: .\templates\anim_site_main\homepage.html:14
-msgid "What we do?"
+msgid "What do we do?"
 msgstr "Для чего этот проект?"
 
 #: .\templates\anim_site_main\homepage.html:17
-msgid "We help stray animals all around the World"
+msgid "We help stray animals all around the world"
 msgstr "Чтобы помочь бездомным животным по всему Миру!"
-
-
 
 #: .\templates\anim_site_main\homepage.html:21
 msgid "Donate your time"
@@ -86,10 +90,12 @@ msgid ""
 "How much time do we spend on things that do not really matter? What if we "
 "tell you that this time can be converted into real money to safe someone`s "
 "life?"
-msgstr "Как много времени мы тратим  порой на бесполезные вещи. А Что, если мы это время может быть переведено в реальыне деньги и спасет чью-то жизнь?"
+msgstr ""
+"Как много времени мы тратим  порой на бесполезные вещи. А Что, если мы это "
+"время может быть переведено в реальыне деньги и спасет чью-то жизнь?"
 
 #: .\templates\anim_site_main\homepage.html:29
-msgid "How it works?"
+msgid "How does it work?"
 msgstr "Как это работает?"
 
 #: .\templates\anim_site_main\homepage.html:32
@@ -100,25 +106,25 @@ msgstr "Выберите проект"
 msgid "Watch a video"
 msgstr "Смотрите видео"
 
-#: .\templates\anim_site_main\homepage.html:47
+#: .\templates\anim_site_main\homepage.html:48
 msgid "Click Donate"
 msgstr "Вы помогли!"
 
-#: .\templates\anim_site_main\homepage.html:54
+#: .\templates\anim_site_main\homepage.html:56
 msgid "Explore More"
 msgstr "Узнайте больше"
 
-#: .\templates\anim_site_main\homepage.html:57
+#: .\templates\anim_site_main\homepage.html:59
 #: .\templates\includes\tabs.html:5
 msgid "About Us"
 msgstr "О нас"
 
-#: .\templates\anim_site_main\homepage.html:63
+#: .\templates\anim_site_main\homepage.html:65
 #: .\templates\includes\tabs.html:27
 msgid "Blog"
 msgstr "Блог"
 
-#: .\templates\anim_site_main\homepage.html:69
+#: .\templates\anim_site_main\homepage.html:71
 #: .\templates\includes\tabs.html:23
 msgid "Donate"
 msgstr "Действовать!"
@@ -192,14 +198,14 @@ msgid "Featured Stories: "
 msgstr "Похожие истории"
 
 #: .\templates\success_stories\success_stories_main.html:24
-msgid "Success stories about rescued animals"
-msgstr "Истории успеха"
+msgid "Just some stories about animals"
+msgstr "Истории о животных"
 
 #~ msgid ""
 #~ "How much time do we spend on things that are not worth our attention? But "
 #~ "did you know that every minute costs some money? Our mission is to "
 #~ "convert time into a real profit and direct it to help stray animals. Even "
-#~ "one minute of your time can safe someone`s life. We do not ask to donate "
+#~ "one minute of your time can save someone`s life. We do not ask to donate "
 #~ "money. You can simply donate a couple minutes of your time!"
 #~ msgstr ""
 #~ "Как много времени порой мы уделяете вещам,которые не заслуживают вашего "

@@ -1,7 +1,7 @@
 {% extends 'anim_site_main/base.html' %}
 {% load static %}
 {% load embed_video_tags %}
-
+{%load i18n %}
 {% block title %}
 	Donate watching ads
 {% endblock %}
@@ -41,7 +41,7 @@
 								</div>
 							</div>
 							<p>
-								Project needs: {{ project.amount_required }}
+								{% trans "Project needs" %}: {{ project.amount_required }}
 							</p>
 
 							<div class="short_description">{{project.short_description|truncatechars:150}}</div>
