@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-21 15:21-0400\n"
+"POT-Creation-Date: 2019-06-15 11:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgstr "Вы только что заработали $ 0.15!! Общая сум
 
 #: .\templates\ad_donation\donation_project_detail.html:93
 msgid "Please login or register to donate"
-msgstr "Пожалуйста, зарегистрируйтесь, чтобы помочь"
+msgstr ""
 
 #: .\templates\ad_donation\donation_project_detail.html:94
 #, fuzzy
@@ -88,9 +88,11 @@ msgstr "Дарите свое время"
 #: .\templates\anim_site_main\homepage.html:27
 msgid ""
 "How much time do we spend on things that do not really matter? What if we "
-"tell you that this time can be converted into real money to save someone`s "
+"tell you that this time can be converted into real money to safe someone`s "
 "life?"
-msgstr "Как много времени мы тратим  порой на бесполезные вещи? А если мы скажем, что это время может быть переведено в реальные деньги, которые спасут чью-то жизнь?"
+msgstr ""
+"Как много времени мы тратим  порой на бесполезные вещи. А Что, если мы это "
+"время может быть переведено в реальыне деньги и спасет чью-то жизнь?"
 
 #: .\templates\anim_site_main\homepage.html:29
 msgid "How does it work?"

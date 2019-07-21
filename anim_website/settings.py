@@ -178,6 +178,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_LOCATION = 'staticfiles'
 AWS_DEFAULT_ACL= None
+SECURE_SSL_REDIRECT = config('SECURE_CONN', default=False, cast=bool)
 
 
 # Static files (CSS, JavaScript, Images)
