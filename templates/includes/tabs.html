@@ -7,22 +7,6 @@
     <li class="{% if active_tab == 'success' %} active{% endif %}">
         <a href="{% url 'success_main' %}">{% trans "Stories"%}</a>
     </li>
-    <!--<li class="{% if active_tab == 'funny' %} active{% endif %}">-->
-        <!--<a href="{% url 'funny_main' %}">Funny</a>-->
-    <!--</li>-->
-
-    <!-- <li class="dropdown {% if active_tab == 'data' %} active{% endif %}"> -->
-        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Data" %}</a> -->
-        <!-- <ul class="dropdown-menu"> -->
-            <!-- <li><a href="{% url 'metrics' %}">{% trans "Website`s Data" %}</a></li> -->
-            <!-- <li><a href="{% url 'data_analysis' %}">{% trans "Statistic" %}</a></li> -->
-        <!-- </ul> -->
-    <!-- </li> -->
-
-    <li class="{% if active_tab == 'tab3' %} active{% endif %}">
-        <a href="{% url 'add_donation' %}">{% trans "Donate" %}</a>
-    </li>
-
     <li class="{% if active_tab == 'blog' %} active{% endif %}">
         <a href="{% url 'blog_main' %}">{% trans "Blog" %}</a>
     </li>
@@ -45,5 +29,8 @@
     <li class="{% if active_tab == 'contacts' %} active{% endif %}">
         <a href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
     </li>
+    <li class=" donate_tab {% if active_tab == 'tab3' %} active{% endif %} ">
+        <a href="{% url 'add_donation' %}">{% trans "Donate" %}</a>
+    </li>	
   </ul>
 </div>

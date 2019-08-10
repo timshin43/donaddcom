@@ -7,48 +7,98 @@
 {% endblock %}
 
 {% block body %}
-	<div class="container-fluid">
-		<div class="row content">
-			<div class="col-sm-2 text-center sidenav ">
-				<p>{% trans "Most popular stories" %}</p>
-                {% for sorted_story in stories_sorted %}
-                    <p>
-                        <!--<a href="{% url 's_story' sorted_story.pk%}">-->
-                        <a href="{%block sort_url%} {%endblock%}">
-                            {{sorted_story.name}}
-                         </a>
-                    </p>
-                {%endfor%}
-                <hr>
-			</div>
-
-			<div class="col-sm-10 text-center">
-				<div class="row">
-					{% block page_name %}{% endblock %}
-					{% for story in stories %}
-						<div class="col-sm-4 stories_intro">
-							<!--<a href="{% url 's_story' story.pk%}">-->
-							<a href= "{%block url%} {%endblock%}">
-								<img class="img-circle suc_main_img" src="{{ story.story_image.url }}">
+	{% block page_name %}{% endblock %}
+	<div class="container-fluid md-1">
+		<div class="container md-1 text-center project_container stories_container">
+			<div class="row content">
+				<div class="col-sm-2 text-center sidenav ">
+					<p>{% trans "Most popular stories" %}</p>
+					{% for sorted_story in stories_sorted %}
+						<p class="text-left sid_bar_popular">
+							<img src="{% static 'img/anim_site_main/paw_white.png' %}" alt="Image">
+							<a href="{%block sort_url%} {%endblock%}">
+								{{sorted_story.name}}
 							</a>
-							<p>{{story.name}}</p>
-							<p>
-								<img class="counter_eye" src="{% static 'img/anim_site_main/eye.png' %}">
-								{{story.views_count}}
-							</p>
-							<p>
-								{{story.created_date|date:"n/j/Y"}}
-							</p>
-							<div class="short_description">{{story.short_description|truncatechars:150}}</div>
+						</p>
+					{%endfor%}
+					<hr>
+				</div>
+				
+				<div class="col-sm-10" >
+					<div class="container md-1 text-center project_container">
+						<div class="row">
+							{% for story in stories %}
+								<div class="col-sm-4 stories_intro">
+									<div class="classWithPad_projects">
+										<div class="row">
+											<div class="col-sm-6 project_pict">
+												<a href= "#">
+													<img class="img-circle suc_main_img" src="{{ story.story_image.url }}">
+												</a>
+											</div>
+											<div class="col-sm-6 project_info text-left">
+												<div class="row">
+													<h4 class="proj_name">{{story.name}}</h4>
+												</div>
+												<div class="row">
+													<div class="proj_name">{{story.created_date|date:"n/j/Y"}}</div>
+												</div>
+												<div class="row">
+													<div class="proj_name">
+														<img class="counter_eye" src="{% static 'img/anim_site_main/eye.png' %}">
+														{{story.views_count}}
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="line">
+											</div>
+											<div class="short_description">{{story.short_description|truncatechars:150}}</div>
+										</div>
+										
+									</div>	
+									<a href= "{%block url%} {%endblock%}" class="btn btn-success go_to_projc_btn">Read</a>
+								</div>
+							{% endfor %}
 						</div>
-					{% endfor %}
-					{% if stories.has_other_pages %}
-						{% include 'includes/paginator.html' %}
-					{% endif %}
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+
+
+
+
+
+				<!-- <div class="col-sm-10 text-center"> -->
+					<!-- <div class="row"> -->
+		
+						<!-- {% for story in stories %} -->
+							<!-- <div class="col-sm-4 stories_intro"> -->
+								<!-- <a href="{% url 's_story' story.pk%}">-->
+								<!-- <a href= "#"> -->
+									<!-- <img class="img-circle suc_main_img" src="{{ story.story_image.url }}"> -->
+								<!-- </a> -->
+								<!-- <p>{{story.name}}</p> -->
+								<!-- <p> -->
+									<!-- <img class="counter_eye" src="{% static 'img/anim_site_main/eye.png' %}"> -->
+									<!-- {{story.views_count}} -->
+								<!-- </p> -->
+								<!-- <p> -->
+									<!-- {{story.created_date|date:"n/j/Y"}} -->
+								<!-- </p> -->
+								<!-- <div class="short_description">{{story.short_description|truncatechars:150}}</div> -->
+							<!-- </div> -->
+						<!-- {% endfor %} -->
+						<!-- {% if stories.has_other_pages %} -->
+							<!-- {% include 'includes/paginator.html' %} -->
+						<!-- {% endif %} -->
+					<!-- <!-- </div> -->
+				<!-- <!-- </div> -->
+
+
+
 
 {% endblock %}

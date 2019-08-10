@@ -14,12 +14,27 @@
 
 {% block body %}
     <div class="content">
-        <h2 class="text-center">
-            {{contacts.title}}
-        </h2>
+		<h3 class="container-fluid md-1 text-center page_title">
+			{{contacts.title}}
+		</h3>
         <div class="container">
             {{contacts.content|safe}}
         </div>
+		<div class="text-center">
+			<a href='https://www.facebook.com/donaddcom'>
+				<img class="icons" src="{% static 'img/anim_site_main/fb_dark_icon.png' %}" alt="Image">
+			</a>
+			<a href='https://www.instagram.com/donaddcom/'>
+				<img class="icons" src="{% static 'img/anim_site_main/inst_dark_icon.png' %}" alt="Image">
+			</a>			
+		</div>
     </div>
+	<div class="container-fluid md-1 text-center start_help_back">
+			<a href="{% url 'add_donation'%}" class="container md-1 start_help">
+				<div class ="row">
+					Start helping!
+				</div>
+			</a>
+	</div>	
 
 {% endblock %}

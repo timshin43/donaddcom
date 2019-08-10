@@ -16,21 +16,20 @@
 {% block body %}
 	<div class="container-fluid">
 		<div class="row content">
+			<h3 class="container-fluid md-1 text-center page_title">
+				{% trans "BLOG" %}
+				<br/>
+				<span id='how_project_grew'>
+					{% trans "Just some notes about this project" %}
+				</span>
+			</h3>			
 			<div class="col-sm-12 text-center">
-				<h2>
-					{% trans "BLOG" %}
-				</h2>
-                <h4>
-                    {% trans "Just some notes about this project" %}
-                </h4>
                 <div class="container text-left blog">
                     {% for post in posts %}
                     <p class="post_title">
-                        <strong><a href="{% url 'blog_post' post.pk %}">{{post.name}}, {{post.created_date|date:"n/j/Y"}}</a></strong>
+						<img src="{% static 'img/anim_site_main/paw.png' %}" class='blog_icons' alt="Image">
+                        <strong><a href="{% url 'blog_post' post.pk %}" class='blog_links'>{{post.name}}</strong></a> {{post.created_date|date:"n/j/Y"}}
                         <br/>
-                        <!-- <span class="post_description"> -->
-                            <!-- {{post.short_description}} -->
-                        <!-- </span> -->
                     </p>
                     {% endfor %}
                 </div>
@@ -75,6 +74,17 @@
                     {% endif %}
         </div>
     </div>
-
+	<div class="container-fluid md-1 text-center start_help_back">
+			<a href="{% url 'add_donation'%}" class="container md-1 start_help">
+				<div class ="row">
+					Start helping!
+					<!-- <a href="#" class='start_helping'>Start helping</a> -->
+				</div>
+			</a>
+	</div>	
+	<!-- <div class="container-fluid md-1 banner_parent"> -->
+		<!-- <img class="banner" src="{% static 'img/anim_site_main/start_helping.png' %}" /> -->
+		<!-- <a href="#">fgf</a> -->
+	<!-- </div>			 -->
 
 {% endblock %}

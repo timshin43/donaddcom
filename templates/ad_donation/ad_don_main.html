@@ -22,6 +22,54 @@
 {% endblock %}
 
 {% block body %}
+	<div class="container-fluid md-1" >
+		<div class="container md-1 text-center project_container">
+			<div class="row">
+				{% for project in all_projects %}
+					<div class="col-sm-4 stories_intro">
+						<div class="classWithPad_projects">
+							<div class="row">
+								<div class="col-sm-6 project_pict">
+									<a href= "{% url 'donate_project' project.pk%}">
+										<img class="img-circle suc_main_img" src="{{ project.project_image.url }}">
+									</a>
+								</div>
+								<div class="col-sm-6 project_info text-left">
+									<div class="row">
+										<h4 class="proj_name">{{project.name}}</h4>
+									</div>
+									<div class="row">
+										<div class="proj_name">{{project.created_date|date:"n/j/Y"}}</div>
+									</div>
+									<div class="row">
+										<div class="proj_name">{% trans "Project needs" %}: ${{ project.amount_required }}</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="line">
+								</div>
+								<div class="short_description">{{project.short_description|truncatechars:150}}</div>
+							</div>
+							<div class="container-fluid progress">
+								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0"
+								aria-valuemin="0" aria-valuemax="50" style="width:{{project.percentage_donated}}%">
+									<span class="label_progress">{{project.percentage_donated}}%</span>
+								</div>
+							</div>	
+					
+						</div>	
+						<a href= "{% url 'donate_project' project.pk%}" class="btn btn-success go_to_projc_btn">donate</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+
+
+
 	<div class="container-fluid">
 			<div class="col-sm-12 text-center">
 				<div class="row">

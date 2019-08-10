@@ -14,8 +14,10 @@
 {% endblock %}
 
 {% block body %}
+	 <h3 class="container-fluid md-1 text-center page_title">
+		Update Account Info
+	</h3>	
     <div class="container account_info ">
-        <h2 class="text-center">Update Account Info</h2>
         <form method="post">
             {% csrf_token %}
             {% for form in list_of_forms %}

@@ -10,69 +10,161 @@
 {% endblock %}
 
 {% block body %}
-	<div class="container-fluid bg-1 text-center">
-		<h2>{% trans "What do we do?" %}</h2>
+	<div class="container-fluid md-1 banner_parent">
+		<img class="banner" src="{% static 'img/anim_site_main/Baner_main.png' %}" />
+	</div>
+	<div class="container-fluid md-1 what_we_do_bckgr">
+		<div class="container-fluid md-1 what_we_do">
+			<div class="col-sm-2 text-left">
+				<img  src="{% static 'img/anim_site_main/cat_icon.png' %}" />
+			</div>
+			<div class="col-sm-8 text-center">
+				<h2>{% trans "What do we do?" %}</h2>
+				<h3>{% trans "We help stray animals all around the world" %}</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid md-1 text-center give_your_time">
+		<div class="container-fluid md-1 give_time_text">
+			<h2>
+				{% trans "Donate your time" %}
+			</h2>
+			<h3 class="container-fluid description">
+				{% trans "How much time do we spend on things that do not really matter? What if we tell you that this time can be converted into real money to save someone`s life?" %}
+			</h3>
+		</div>
+	</div>
+	
+	<div class="container-fluid md-1 text-center how_it_works">
+		<div  class="container md-1 section_with_icons">
+			<h2 id='how_works_title'>{% trans "How does it work?" %}</h2>
+			<div class="col-sm-2 text-center how_works_icon">
+				<h4 class='icon_title'>{% trans "Choose a project" %}</h4>
+				<img class="icons" src="{% static 'img/anim_site_main/choose_proj.png' %}" alt="Image">
+			</div>
+            <div class="col-sm-3 text-center how_works_paws">
+				<hr size="30">
+				<img class="icons arrow1" src="{% static 'img/anim_site_main/paws1.png' %}" alt="Image">
+			</div>
+            <div class="col-sm-2 text-center how_works_icon">
+                <h4 class='icon_title'>{% trans "Watch a video" %}</h4>
+				<img class="icons" src="{% static 'img/anim_site_main/watch_video.png' %}" alt="Image">
+			</div>
+
+            <div class="col-sm-3 text-center how_works_paws">
+				<hr size="30">
+				<img class="icons arrow2" src="{% static 'img/anim_site_main/paws2.png' %}" alt="Image">
+			</div>
+            <div class="col-sm-2 text-center how_works_icon">
+                <h4 class='icon_title'>{% trans "Click Donate" %}</h4>
+				<img class="icons" src="{% static 'img/anim_site_main/you_helped.png' %}" alt="Image">
+			</div>
+		</div>		
+	</div>
+	<div class="container-fluid md-1 text-center cant_help_all_back">
+		<h1>
+			{% trans "Explore More" %}
+		</h1>		
+		<div class="container md-1 cant_help_all">
+			<div class="row ">
+				<div class="col-sm-6 icon_links1">
+					<a href="{%url 'about_us'%}">
+						<div class="classWithPad abt_us">
+							<h4>
+								{% trans "About Us" %}
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6 icon_links2">
+					<a href="{%url 'blog_main'%}" >
+						<div class="classWithPad blg">
+							<h4>
+								{% trans "BLOG" %}
+							</h4>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 icon_links3">
+					<a href="{%url 'add_donation'%}">
+						<h4>
+							{% trans "DONATE" %}
+						</h4>
+					</a>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+
+
+
+
+	<!-- <div class="container-fluid bg-1 text-center"> -->
+		<!-- <h2>{% trans "What do we do?" %}</h2> -->
 		
-		<img class="img-circle" src="{% static 'img/anim_site_main/green_eye_cat.jpg' %}">
-		<h3>{% trans "We help stray animals all around the world" %}</h3>
-	</div>
+		<!-- <img class="img-circle" src="{% static 'img/anim_site_main/green_eye_cat.jpg' %}"> -->
+		<!-- <h3>{% trans "We help stray animals all around the world" %}</h3> -->
+	<!-- </div> -->
 
-	<div class="container-fluid bg-3 text-center">
-        <h2>{% trans "Donate your time" %}</h2>
-        <!-- <h3 class="container-fluid description">{% trans "How much time do we spend on things that do not really matter? -->
-			<!-- You will not be surprised if we say that every minute of your time costs some money. Our mission is to convert time into a real profit  -->
-			<!-- and direct it to help stray animals. Even one minute of your time can safe someone`s life. We do not ask to donate money. You can simply donate a  -->
-			<!-- couple minutes of your time!" %} -->
+	<!-- <div class="container-fluid bg-3 text-center"> -->
+        <!-- <h2>{% trans "Donate your time" %}</h2> -->
+        <!-- <!-- <h3 class="container-fluid description">{% trans "How much time do we spend on things that do not really matter? -->
+			<!-- <!-- You will not be surprised if we say that every minute of your time costs some money. Our mission is to convert time into a real profit  -->
+			<!-- <!-- and direct it to help stray animals. Even one minute of your time can safe someone`s life. We do not ask to donate money. You can simply donate a  -->
+			<!-- <!-- couple minutes of your time!" %} -->
+		<!-- <!-- </h3> -->
+		<!-- <h3 class="container-fluid description">{% trans "How much time do we spend on things that do not really matter? What if we tell you that this time can be converted into real money to save someone`s life?" %} -->
 		<!-- </h3> -->
-		<h3 class="container-fluid description">{% trans "How much time do we spend on things that do not really matter? What if we tell you that this time can be converted into real money to save someone`s life?" %}
-		</h3>
-        <h3>{% trans "How does it work?" %}</h3>
-		<div  class="row section_with_icons">
-			<div class="col-sm-2 text-center">
-				<h4>{% trans "Choose a project" %}</h4>
-				<img class="icons" src="{% static 'img/anim_site_main/208131-animals.png' %}" alt="Image">
-			</div>
-            <div class="col-sm-3 text-center">
-				<img class="icons arrow" src="{% static 'img/anim_site_main/arrow.png' %}" alt="Image">
-			</div>
-            <div class="col-sm-2 text-center">
-                <h4>{% trans "Watch a video" %}</h4>
-				<img class="icons" src="{% static 'img/anim_site_main/watch_ad.png' %}" alt="Image">
+        <!-- <h3>{% trans "How does it work?" %}</h3> -->
+		<!-- <div  class="row section_with_icons"> -->
+			<!-- <div class="col-sm-2 text-center"> -->
+				<!-- <h4>{% trans "Choose a project" %}</h4> -->
+				<!-- <img class="icons" src="{% static 'img/anim_site_main/208131-animals.png' %}" alt="Image"> -->
+			<!-- </div> -->
+            <!-- <div class="col-sm-3 text-center"> -->
+				<!-- <img class="icons arrow" src="{% static 'img/anim_site_main/arrow.png' %}" alt="Image"> -->
+			<!-- </div> -->
+            <!-- <div class="col-sm-2 text-center"> -->
+                <!-- <h4>{% trans "Watch a video" %}</h4> -->
+				<!-- <img class="icons" src="{% static 'img/anim_site_main/watch_ad.png' %}" alt="Image"> -->
+				<!-- <!-- <img class="icons" src="{% static 'img/anim_site_main/help-donate.png' %}" alt="Image"> -->
+			<!-- </div> -->
+
+            <!-- <div class="col-sm-3 text-center"> -->
+				<!-- <img class="icons arrow" src="{% static 'img/anim_site_main/arrow.png' %}" alt="Image"> -->
+			<!-- </div> -->
+            <!-- <div class="col-sm-2 text-center"> -->
+                <!-- <h4>{% trans "Click Donate" %}</h4> -->
 				<!-- <img class="icons" src="{% static 'img/anim_site_main/help-donate.png' %}" alt="Image"> -->
-			</div>
+				<!-- <!-- <img class="icons" src="{% static 'img/anim_site_main/bw-trends.png' %}" alt="Image"> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	<!-- </div> -->
 
-            <div class="col-sm-3 text-center">
-				<img class="icons arrow" src="{% static 'img/anim_site_main/arrow.png' %}" alt="Image">
-			</div>
-            <div class="col-sm-2 text-center">
-                <h4>{% trans "Click Donate" %}</h4>
-				<img class="icons" src="{% static 'img/anim_site_main/help-donate.png' %}" alt="Image">
-				<!-- <img class="icons" src="{% static 'img/anim_site_main/bw-trends.png' %}" alt="Image"> -->
-			</div>
-		</div>
-	</div>
-
-    <div class="container-fluid bg-1 text-center">
-        <h2>{% trans "Explore More" %}</h2>
-		<div class="row section_with_icons">
-			<div class="col-sm-4">
-				<h4>{% trans "About Us" %}</h4>
-				<a href="{%url 'about_us'%}">
-					<img class="img-circle img_links" src="{% static 'img/anim_site_main/about_us.jpg' %}" alt="Image">
-				</a>
-			</div>
-			<div class="col-sm-4 ">
-				<h4>{% trans "Blog" %}</h4>
-				<a href="{%url 'blog_main'%}" >
-					<img class="img-circle img_links" src="{% static 'img/anim_site_main/dog-blog.jpg' %}" alt="Image">
-				</a>
-			</div>
-			<div class="col-sm-4">
-				<h4>{% trans "Donate" %}</h4>
-				<a href="{%url 'add_donation'%}">
-					<img class="img-circle img_links" src="{% static 'img/anim_site_main/Dog_and_bread.jpg' %}" alt="Image">
-				</a>
-			</div>
-		</div>
-	</div>
+    <!-- <div class="container-fluid bg-1 text-center"> -->
+        <!-- <h1>{% trans "Explore More" %}</h1> -->
+		<!-- <div class="row section_with_icons"> -->
+			<!-- <div class="col-sm-4"> -->
+				<!-- <h4>{% trans "About Us" %}</h4> -->
+				<!-- <a href="{%url 'about_us'%}"> -->
+					<!-- <img class="img-circle img_links" src="{% static 'img/anim_site_main/about_us.jpg' %}" alt="Image"> -->
+				<!-- </a> -->
+			<!-- </div> -->
+			<!-- <div class="col-sm-4 "> -->
+				<!-- <h4>{% trans "Blog" %}</h4> -->
+				<!-- <a href="{%url 'blog_main'%}" > -->
+					<!-- <img class="img-circle img_links" src="{% static 'img/anim_site_main/dog-blog.jpg' %}" alt="Image"> -->
+				<!-- </a> -->
+			<!-- </div> -->
+			<!-- <div class="col-sm-4"> -->
+				<!-- <h4>{% trans "Donate" %}</h4> -->
+				<!-- <a href="{%url 'add_donation'%}"> -->
+					<!-- <img class="img-circle img_links" src="{% static 'img/anim_site_main/Dog_and_bread.jpg' %}" alt="Image"> -->
+				<!-- </a> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	<!-- </div> -->
 {% endblock %}

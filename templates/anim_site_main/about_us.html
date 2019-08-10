@@ -14,12 +14,20 @@
 
 {% block body %}
     <div class="content">
-        <h2 class="text-center">
+        <h3 class="container-fluid md-1 text-center page_title">
             {{about_us.title}}
-        </h2>
+        </h3>
         <div class="container">
             {{about_us.content|safe}}
         </div>
     </div>
+	<div class="container-fluid md-1 text-center start_help_back">
+			<a href="{% url 'add_donation'%}" class="container md-1 start_help">
+				<div class ="row">
+					Start helping!
+					<!-- <a href="#" class='start_helping'>Start helping</a> -->
+				</div>
+			</a>
+	</div>		
 
 {% endblock %}
