@@ -7,7 +7,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 def success_main(request):
-    all_success_stories = Success_stories.objects.all().order_by('created_date')
+    all_success_stories = Success_stories.objects.all().order_by('-created_date')
     page = request.GET.get("page", 1)
     paginator = Paginator(all_success_stories, 9)
     stories_sorted = Success_stories.objects.all().order_by('-views_count')

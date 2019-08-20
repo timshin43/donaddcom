@@ -36,7 +36,7 @@
 				
 				{% if user.is_authenticated %}
 					{% if don_from_users >= 0 %}
-						{% if user.app_user.view_count < 9 %}
+						{% if user.app_user.view_count < 4 %}
 							<div class="watch_ad">
 								<div class="watch_ad-icon">
 									<strong>
@@ -84,7 +84,7 @@
 								{% trans "You just earned $ 0.15!! Money remained: $" %}
 							</div>
 						{%else%}
-							<h1>Each user has only 10 videos per day and you ran out of shoots for today. You could continue to help after {{time_delta}} </h1>
+							<h1>Each user has only 5 videos per day and you ran out of shoots for today. You could continue to help after {{time_delta}} </h1>
 						{%endif%}
 					{%else%}
 						<h4>Project is fully funded</h4>
