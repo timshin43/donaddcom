@@ -23,7 +23,7 @@ def ad_donation(request):
 @ensure_csrf_cookie
 @login_required
 def donate(request,donat_project_pk):
-	donation_user = Donations(amount=0.15, who_donated=request.user)
+	donation_user = Donations(amount=0.1, who_donated=request.user)
 	donation_user.save()
 	donation_project = get_object_or_404(Project_for_donations, pk=donat_project_pk)
 	donation_user.project.add(donation_project)
