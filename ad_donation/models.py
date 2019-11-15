@@ -50,7 +50,8 @@ class Video(models.Model):
 	views_count = models.PositiveIntegerField(default=0)
 	video = EmbedVideoField()
 	project = models.ManyToManyField(Project_for_donations, related_name='project_video', blank=True)
-	owner = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+	#owner = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+	owner = models.OneToOneField(User, related_name='app_user', default=1, on_delete=models.CASCADE)
 	is_active = models.BooleanField(blank=True, default=False)
 	is_deleted = models.BooleanField(blank=True, default=False)
 
