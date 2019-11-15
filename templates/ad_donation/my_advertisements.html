@@ -1,0 +1,54 @@
+{% extends 'anim_site_main/base.html' %}
+{% load static %}
+
+{% block title %}
+	My advertisements
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="{% static 'css/ad_donation/advertisements.css' %}">
+{% endblock %}
+
+{% block main_menu %}
+    {% include "includes/tabs.html" with active_tab='my_advertisements' %}
+{% endblock %}
+
+{% block body %}
+	 <h3 class="container-fluid md-1 text-center page_title">
+		Advertisements
+	</h3>	
+    <div class="container advertisements ">
+
+	<div class="row">
+	    <div class="col-md-4 offset-md-8">
+		<a href="/add_donation/advertisements/add_advertisement"><button id="add_advertisement" type="button" class="btn btn-primary" name="Add Advertisement" value="Add Advertisement">Add New</button></a>
+	    </div>
+	</div>
+	<table id="advertisements_table">
+	    <thead>
+		<tr>
+		    <th>Name</th>
+		    <th>Description</th>
+		    <th>Language</th>
+		    <th>Video</th>
+		    <th>Link</th>
+		    <th>Views</th>
+		    <th>Action</th>
+		</tr>
+	    </thead>
+	    <tbody>
+		{% for ad in my_advertisements %}
+		    <tr>
+		        <td>{{ad.name}}</td>
+		        <td>{{ad.description|truncatechars:150}}</td>
+		        <td>{{ad.language}}</td>
+		        <td><a href='{{ad.video}}' target="blank_">Video</a></td>
+		        <td><a href='{{ad.link}}' target="blank_">Link</td>
+		        <td>{{ad.views_count}}</td>
+		        <td><a href='/add_donation/advertisements/remove_ad?vpk={{ad.id}}'>Remove</a></td>
+		    </tr>
+		{% endfor %}
+	    </tbody>
+	</table>
+    </div>
+{% endblock %}

@@ -2,29 +2,29 @@
 {% load static %}
 
 {% block title %}
-	My account
+	Ad New Advertisement
 {% endblock %}
 
 {% block stylesheet %}
-	<link rel="stylesheet" href="{% static 'css/accounts/update_account.css' %}">
+	<link rel="stylesheet" href="{% static 'css/ad_donation/update_advertisements.css' %}">
 {% endblock %}
 
 {% block main_menu %}
-    {% include "includes/tabs.html" with active_tab='my_account' %}
+    {% include "includes/tabs.html" with active_tab='my_advertisements' %}
 {% endblock %}
 
 {% block body %}
 	 <h3 class="container-fluid md-1 text-center page_title">
-		Update Account Info
+		Add New Advertisement
 	</h3>	
-    <div class="container account_info ">
+    <div class="container advertisement ">
         <form method="post">
             {% csrf_token %}
             {% for form in list_of_forms %}
                 {% include 'includes/form.html' %}
             {% endfor %}
             <div class="button text-center">
-            <button type ="submit" class="btn btn-success ">Update</button>
+            <button type ="submit" class="btn btn-success ">Save</button>
             </div>
         </form>
     </div>
