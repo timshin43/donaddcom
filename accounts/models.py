@@ -72,6 +72,7 @@ class AppUser(models.Model):
     view_count_expire = models.DateTimeField(blank=True, default=timezone.now())
     state = models.CharField(max_length=25, choices=STATES_CHOICE, blank=True, default='NAN')
     birth_date = models.DateTimeField(blank=True, default=timezone.now())
+    is_advertiser = models.BooleanField(blank=True, default=False)
 
 
 

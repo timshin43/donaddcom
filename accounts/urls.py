@@ -43,6 +43,6 @@ urlpatterns = [
         name='password_change_done'),
 		
     # url(r'^settings/account/$', account_views.UserUpdateView.as_view(), name='my_account'),
-    url(r'^settings/account/$', views.UserProfile, name='my_account'),
+    url(r'^settings/account/$', views.UserProfile, name='my_account')
 
 ]

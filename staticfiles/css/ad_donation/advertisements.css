@@ -1,0 +1,19 @@
+table#advertisements_table {
+    width: 100%;
+    border: 1px solid #c0c0c0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table#advertisements_table thead {
+    background-color: #2cae51;
+    color: #fff;
+}
+
+table#advertisements_table thead tr th {
+    padding: 10px;
+}
+
+table#advertisements_table tbody tr {
+    border: 1px solid #c0c0c0;
+}

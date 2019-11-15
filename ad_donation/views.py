@@ -8,6 +8,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 import random
 from datetime import datetime, timedelta
 from django.utils import timezone
+from .forms import NewAdvertisementForm
 
 # Create your views here.
 @login_required
@@ -23,7 +24,7 @@ def ad_donation(request):
 @ensure_csrf_cookie
 @login_required
 def donate(request,donat_project_pk):
-	donation_user = Donations(amount=0.1, who_donated=request.user)
+	donation_user = Donations(amount=0.10, who_donated=request.user, created_date=timezone.now())
 	donation_user.save()
 	donation_project = get_object_or_404(Project_for_donations, pk=donat_project_pk)
 	donation_user.project.add(donation_project)
@@ -116,3 +117,36 @@ def success_main(request):
                                                                          "stories": stories,
                                                                          'stories_sorted':stories_sorted
                                                                          })
+@login_required
+def ManageAdvertisements(request):
+    my_advertisements = Video.objects.filter(owner=request.user,is_deleted=0)
+
+    return render(request, 'ad_donation/my_advertisements.html', {'my_advertisements': my_advertisements
+                                                                         })
+@login_required
+def AddAdvertisement(request):
+    try:
+        if request.method == 'POST':
+            main_form = NewAdvertisementForm(request.POST)
+            if main_form.is_valid():
+                video = main_form.save(commit=False)
+                video.owner = request.user
+                video.save()
+                return redirect('my_advertisements')
+        else:
+            main_form = NewAdvertisementForm(instance=request.user)
+            #main_form = MainUserForm(instance=request.user)
+            #list_of_forms = [main_form]
+            list_of_forms = [main_form]
+        return render(request, 'ad_donation/add_advertisement.html', {'list_of_forms': list_of_forms})
+    except:
+        return redirect('login')
+
+@login_required
+def RemoveAdvertisement(request):
+    advertisement = Video.objects.filter(owner=request.user,is_deleted=0,pk=request.GET['vpk']).first()
+    advertisement.is_deleted = 1
+    advertisement.save()
+
+    return redirect('my_advertisements')
+

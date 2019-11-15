@@ -1,3 +1,7 @@
+import urllib
+import urllib.request as urllib2
+import json
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
@@ -15,15 +19,34 @@ from django.urls import reverse_lazy
 def sign_up(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
+
         if form.is_valid():
-            user = form.save()
-            user.refresh_from_db()
+            ''' Begin reCAPTCHA validation '''
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            values = {
+                'secret': '6LdzUMEUAAAAAGRrF-QsjPLS6VZQmwHtSj0Cusub',
+                'response': recaptcha_response
+            }
+            data = urllib.parse.urlencode(values).encode("utf-8")
+            req = urllib2.Request(url, data)
+            response = urllib2.urlopen(req)
+            result = json.load(response)
+            ''' End reCAPTCHA validation '''
+
+            if result['success']:
+                user = form.save()
+                user.refresh_from_db()
 			# uncomment if you need extra fields. See models
             # user.app_user.country = form.cleaned_data.get('country')
             # user.app_user.state = form.cleaned_data.get('state')
             # user.app_user.birth_date = form.cleaned_data.get('birth_date')
-            user.save()
-            auth_login(request, user)
+                user.save()
+                auth_login(request, user)
+            else:
+                form = SignUpForm()
+                return render(request, 'accounts/sign_up.html', {'form': form})
+
             return redirect('hom_page')
     else:
         form = SignUpForm()
