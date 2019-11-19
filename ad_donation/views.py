@@ -66,7 +66,7 @@ def donate_test(request):
     return HttpResponse(data_from_page)
 	
 def donate_main(request):
-	all_projects = Project_for_donations.objects.all().order_by('created_date')
+	all_projects = Project_for_donations.objects.all().order_by('-created_date')
 	return render(request, "ad_donation/ad_don_main.html", {"all_projects": all_projects,
 																	 })
 																	 
