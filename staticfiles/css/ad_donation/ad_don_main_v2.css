@@ -1,0 +1,169 @@
+.project_container{
+	width:100%;
+	max-width:2000px;
+	
+}
+
+
+.stories_intro{
+}
+
+.classWithPad_projects { 
+	margin:3px; 
+	padding:10px; 
+	/* background-color:#2cae51; */
+	background-color:#f8f8f8;
+	border-radius:10px;
+	min-height:350px;
+}
+
+.project_info{
+	color:black;
+}
+
+.project_pict{
+	padding-right:0px;
+}
+
+.project_info .row{
+	margin:0px;
+	padding:0px;
+	margin-bottom:10px;
+	
+}
+
+.line{
+	margin:10% 10% 5% 10%;
+	background-color:#a0afa3;
+	height:2px;
+}
+
+.short_description{
+	color:black;
+	padding:10px;
+    height:70px;
+    max-width: 350px;
+    margin:auto;
+    overflow: hidden;
+}
+
+
+.go_to_projc_btn{
+	margin-top:2%;
+	width:98%;
+	height:10%;
+	background-color:#2cae51;
+}
+
+
+.container-fluid .progress{
+	background-color:#e1e1e1;
+	
+}
+
+
+.sidenav {
+	height:100%;
+	padding-top: 20px;
+	background-color: #f1f1f1;
+}
+
+.stories_intro{
+	margin-top:40px;
+}
+
+.suc_main_img{
+    height:100%;
+    width:100%;
+    max-height:250px;
+    max-width:250px;
+
+}
+
+.counter_eye{
+    height:20px;
+}
+
+hr{
+    border-color: #ccc3c3;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0;
+}
+
+.stories_intro p {
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.short_description{
+    height:70px;
+    width:100%;
+    max-width: 350px;
+    margin:auto;
+    overflow: hidden;
+}
+
+.progress{
+	padding:0;
+	width:90%;
+	min-height:8px;
+	position: relative;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+ }
+ 
+ .progress-bar-success{
+	 background-color:#2cae51;
+ }
+
+
+.watch_ad {
+	/* height:300px; */
+	width: 70%;
+	padding-top: 20px;
+	margin: auto;
+	/*background-color: #f1f1f1;*/
+}
+
+.icons{
+    height:100%;
+    width:100%;
+    max-height:80px;
+    max-width:80px;
+}
+
+iframe{
+    width: 70%;
+    max-width:480px;
+}
+
+.big_font{
+    font-weight: bold;
+}
+
+.arrow_down{
+    height:100%;
+    width:100%;
+    max-height:25px;
+    max-width:25px;
+
+}
+
+#donate_arrows, #next_video_arrows{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.proj_name{
+	margin-bottom:0px;
+}
+
+

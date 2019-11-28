@@ -1,3 +1,64 @@
+.project_container{
+	width:100%;
+	max-width:2000px;
+	
+}
+
+.classWithPad_projects { 
+	margin:3px; 
+	padding:10px; 
+	/* background-color:#2cae51; */
+	background-color:#f8f8f8;
+	border-radius:10px;
+	min-height:320px;
+}
+
+.project_info{
+	color:black;
+}
+
+.project_pict{
+	padding-right:0px;
+}
+
+.project_info .row{
+	margin:0px;
+	padding:0px;
+	margin-bottom:10px;
+	
+}
+
+.line{
+	margin:10% 10% 5% 10%;
+	background-color:#a0afa3;
+	height:2px;
+}
+
+.short_description{
+	color:black;
+	padding:10px;
+    height:70px;
+    max-width: 350px;
+    margin:auto;
+    overflow: hidden;
+}
+
+
+.go_to_projc_btn{
+	margin-top:2%;
+	width:98%;
+	height:10%;
+	background-color:#2cae51;
+}
+
+
+.container-fluid .progress{
+	background-color:#e1e1e1;
+	bottom: 5px;
+	
+}
+
+
 .sidenav {
 	height:100%;
 	padding-top: 20px;
@@ -6,6 +67,7 @@
 
 .stories_intro{
 	margin-top:40px;
+	margin-bottom:40px;
 }
 
 .suc_main_img{
@@ -33,7 +95,7 @@ hr{
 }
 
 .short_description{
-    height:70px;
+    height:150px;
     width:100%;
     max-width: 350px;
     margin:auto;
@@ -42,9 +104,12 @@ hr{
 
 .progress{
 	padding:0;
+	width:90%;
+	min-height:8px;
 	position: relative;
 	margin-bottom:10px;
 	margin-top:10px;
+	left: 5%;
 }
 
 .progress span {
@@ -52,6 +117,10 @@ hr{
     display: block;
     width: 100%;
     color: black;
+ }
+ 
+ .progress-bar-success{
+	 background-color:#2cae51;
  }
 
 
@@ -92,9 +161,12 @@ iframe{
     margin-bottom: 15px;
 }
 
+h4.proj_name {
+	font-weight: bold;
+}
+
 .proj_name{
 	margin-bottom:0px;
-	
 }
 
 

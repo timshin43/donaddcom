@@ -15,7 +15,7 @@
 	</div>
 	<div class="container-fluid md-1 what_we_do_bckgr">
 		<div class="container-fluid md-1 what_we_do">
-			<div class="col-sm-2 text-left">
+			<div class="col-sm-2 text-right">
 				<img  src="{% static 'img/anim_site_main/cat_icon.png' %}" />
 			</div>
 			<div class="col-sm-8 text-center">
@@ -30,7 +30,7 @@
 				{% trans "Donate your time" %}
 			</h2>
 			<h3 class="container-fluid description">
-				{% trans "How much time do we spend on things that do not really matter? What if we tell you that this time can be converted into real money to save someone`s life?" %}
+				{% trans "How much time do we spend on things that do not really matter? What if we tell you that this time<br /> can be converted into real money to save someone`s life?" %}
 			</h3>
 		</div>
 	</div>
@@ -62,8 +62,14 @@
 		</div>		
 	</div>
 	<div class="container-fluid md-1 text-center cant_help_all_back">
+		<div class="row" id="cant-help-everyone-row">
+			<div class="col-md-12">
+				<center>{% trans "We can not help everyone but can inspire and grant a chance all the others!" %}</center>
+			</div>
+		</div>
+
 		<h1>
-			{% trans "Explore More" %}
+			{% trans "EXPLORE MORE" %}
 		</h1>		
 		<div class="container md-1 cant_help_all">
 			<div class="row ">
@@ -71,7 +77,7 @@
 					<a href="{%url 'about_us'%}">
 						<div class="classWithPad abt_us">
 							<h4>
-								{% trans "About Us" %}
+								{% trans "ABOUT US" %}
 							</h4>
 						</div>
 					</a>
@@ -88,11 +94,13 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 icon_links3">
+				    <center>
 					<a href="{%url 'add_donation'%}">
 						<h4>
 							{% trans "DONATE" %}
 						</h4>
 					</a>
+				    </center>
 				</div>
 			</div>	
 		</div>

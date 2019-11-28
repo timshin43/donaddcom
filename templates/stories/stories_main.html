@@ -12,7 +12,7 @@
 		<div class="container md-1 text-center project_container stories_container">
 			<div class="row content">
 				<div class="col-sm-2 text-center sidenav ">
-					<p>{% trans "Most popular stories" %}</p>
+					<p class="stories-menu-header">{% trans "Most popular stories" %}</p>
 					{% for sorted_story in stories_sorted %}
 						<p class="text-left sid_bar_popular">
 							<img src="{% static 'img/anim_site_main/paw_white.png' %}" alt="Image">
@@ -28,17 +28,17 @@
 					<div class="container md-1 text-center project_container">
 						<div class="row">
 							{% for story in stories %}
-								<div class="col-sm-4 stories_intro">
+								<div class="col-sm-6 col-lg-4 col-xs-12 stories_intro">
 									<div class="classWithPad_projects">
 										<div class="row">
-											<div class="col-sm-6 project_pict">
+											<div class="col-sm-6 col-lg-7 project_pict">
 												<a href= "#">
 													<img class="img-circle suc_main_img" src="{{ story.story_image.url }}">
 												</a>
 											</div>
-											<div class="col-sm-6 project_info text-left">
+											<div class="col-sm-6 col-lg-5 project_info text-left">
 												<div class="row">
-													<h4 class="proj_name">{{story.name}}</h4>
+													<h4 class="proj_name">{{story.name|truncatechars:28}}</h4>
 												</div>
 												<div class="row">
 													<div class="proj_name">{{story.created_date|date:"n/j/Y"}}</div>
@@ -49,14 +49,16 @@
 														{{story.views_count}}
 													</div>
 												</div>
+												{#<div class="row"><div class="">{{story.short_description|truncatechars:150}}...</div></div>#}
 											</div>
 										</div>
+
 										<div class="row">
 											<div class="line">
 											</div>
 											<div class="short_description">{{story.short_description|truncatechars:150}}</div>
 										</div>
-										
+
 									</div>	
 									<a href= "{%block url%} {%endblock%}" class="btn btn-success go_to_projc_btn">Read</a>
 								</div>

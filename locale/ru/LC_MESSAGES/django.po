@@ -19,6 +19,10 @@ msgstr ""
 "10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
 "100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: .\templates\anim_site_main\base.html:74
+msgid "We collected"
+msgstr "Мы собрали"
+
 #: .\templates\ad_donation\ad_don_main.html:44
 msgid "Project needs"
 msgstr "Проекту требуется"
@@ -108,24 +112,29 @@ msgstr "Смотрите видео"
 msgid "Click Donate"
 msgstr "Вы помогли!"
 
-#: .\templates\anim_site_main\homepage.html:56
-msgid "Explore More"
-msgstr "Узнайте больше"
+#: .\templates\anim_site_main\homepage.html:67
+#: .\templates\includes\tabs.html:27
+msgid "We can not help everyone but can inspire and grant a chance all the others!"
+msgstr "Мы не можем помочь всем, но можем дать надежду и шанс остальным!"
+
+#: .\templates\anim_site_main\homepage.html:72
+msgid "EXPLORE MORE"
+msgstr "УЗНАЙТЕ БОЛЬШЕ"
 
 #: .\templates\anim_site_main\homepage.html:59
 #: .\templates\includes\tabs.html:5
-msgid "About Us"
-msgstr "О нас"
+msgid "ABOUT US"
+msgstr "О НАС"
 
 #: .\templates\anim_site_main\homepage.html:65
 #: .\templates\includes\tabs.html:27
-msgid "Blog"
-msgstr "Блог"
+msgid "BLOG"
+msgstr "БЛОГ"
 
 #: .\templates\anim_site_main\homepage.html:71
 #: .\templates\includes\tabs.html:23
-msgid "Donate"
-msgstr "Действовать!"
+msgid "DONATE"
+msgstr "ДЕЙСТВОВАТЬ!"
 
 #: .\templates\blog\blog_main.html:21
 msgid "BLOG"

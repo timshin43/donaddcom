@@ -7,16 +7,17 @@
 		<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{%block title%}{% endblock %}</title>
+	<title>{%block title%}{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
-		<link rel="stylesheet" href="{% static 'css/anim_site_main/base.css' %}">
-
+	<link rel="stylesheet" href="{% static 'css/anim_site_main/base.css' %}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="shortcut icon" type="image/png" href="{% static 'img/anim_site_main/favicon.png' %}"/>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/anim_site_main/favicon.png' %}"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+	<script src="{% static 'js/anim_site_main/main.js' %}"></script>
 
 <script>
 var dt = new Date();
@@ -50,6 +51,11 @@ document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-
 						<form action= "{% url 'set_language' %}" method = "post">
 							{% csrf_token %}
 							<input type = "hidden" name = "text" value = "{{redirect_to}}"/>
+							<div class="languages">
+								<a href="javascript:void()" class="language" id="language-eng" val="en">ENGLISH</a>
+								<i class="fa fa-circle language language-fa" aria-hidden="true"></i>
+								<a href="javascript:void()" class="language" id="language-ru" val="ru">РУССКИЙ</a>
+							</div>
 							<select class="form-control " name = "language" id="lang_input">
 								{% get_available_languages as LANGUAGES %}
 								{% for language in LANGUAGES %}
@@ -65,7 +71,7 @@ document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-
 						{% if user.is_authenticated %}
 							{{user.username}}
 						{% endif %}
-						<img id='vseg_sobr_paw' src="{% static 'img/anim_site_main/vsego_sobrano.png' %}">We collected: <strong>${{total_don_from_users}}</strong>
+						<img id='vseg_sobr_paw' src="{% static 'img/anim_site_main/vsego_sobrano.png' %}">{% trans "We collected" %}: <strong>${{total_don_from_users}}</strong>
 					</div>
 				</div>
 			</div>

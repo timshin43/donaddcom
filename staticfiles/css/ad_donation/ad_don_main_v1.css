@@ -1,0 +1,41 @@
+.watch_ad {
+	/* height:300px; */
+	width: 70%;
+	padding-top: 20px;
+	margin: auto;
+	/*background-color: #f1f1f1;*/
+}
+
+.icons{
+    height:100%;
+    width:100%;
+    max-height:80px;
+    max-width:80px;
+}
+
+iframe{
+    width: 70%;
+    max-width:480px;
+}
+
+.big_font{
+    font-weight: bold;
+}
+
+.arrow_down{
+    height:100%;
+    width:100%;
+    max-height:25px;
+    max-width:25px;
+
+}
+
+#donate_arrows, #next_video_arrows{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.progress{
+	padding:0;
+	
+}

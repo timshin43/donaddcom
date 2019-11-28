@@ -26,3 +26,33 @@
     bottom: 0;
     margin: auto;
 }
+
+.blog_icons{
+	width:25px;
+}
+
+.blog_links{
+	color:black;
+}
+
+
+.banner_parent{
+	position: relative;
+	padding:0px;
+	top: 0;
+	left: 0;
+}
+
+.banner{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	max-height:400px;
+}
+
+#how_project_grew{
+	font-size:20px;
+}
+
