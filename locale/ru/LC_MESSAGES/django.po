@@ -48,7 +48,7 @@ msgid "Watch the next video"
 msgstr "Смотрите видео"
 
 #: .\templates\ad_donation\donation_project_detail.html:81
-msgid "DONATE"
+msgid "Donate"
 msgstr "Пожертвовать"
 
 #: .\templates\ad_donation\donation_project_detail.html:82
@@ -122,8 +122,11 @@ msgid "EXPLORE MORE"
 msgstr "УЗНАЙТЕ БОЛЬШЕ"
 
 #: .\templates\anim_site_main\homepage.html:76
-#: .\templates\includes\tabs.html:5
 msgid "ABOUT US"
+msgstr "О НАС"
+
+#: .\templates\includes\tabs.html:5
+msgid "About Us"
 msgstr "О НАС"
 
 #: .\templates\anim_site_main\homepage.html:65
