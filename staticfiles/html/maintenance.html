@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	Donadd
+</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+        <script type="text/javascript" async="" src="https://donaddcom.s3.amazonaws.com/staticfiles/css/anim_site_main/analytics.js"></script><script src="https://donaddcom.s3.amazonaws.com/staticfiles/css/anim_site_main/materialize.js"></script>
+	<script src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/jquery.js"></script>
+	<script src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/bootstrap.js"></script>
+	<link rel="shortcut icon" type="image/png" href="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/favicon.png">
+	<link rel="stylesheet" href="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/font-awesome.css">
+	<script src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/main.js"></script>
+
+<style>
+
+body{
+    /*font-family:"Verdana";*/
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.navbar {
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    /*letter-spacing: 5px;*/
+    letter-spacing: 0;
+}
+
+#we_collected_background {
+	background-color:#2cae51;
+	width:100%;
+}
+
+#we_collected {
+	width: 100%;
+	max-width: 2000px;
+	color: white;
+	font-weight: bold;
+	padding-right: 10%;
+	font-size: 16px;
+}
+
+#vseg_sobr_paw {
+	padding-left:5px;
+	padding-right:5px;
+	width: 40px;
+}
+
+#lang {
+	color: black;
+	vertical-align:middle;
+	padding:0px;
+	padding-left: 7.2%;
+}
+
+#lang_input {
+	/*margin-top:5px;*/
+	padding:1px;
+	vertical-align: middle;
+	width :50px;
+	height: 80%;
+	float:left;
+	visibility: hidden;
+}
+
+#lang_button {
+	margin-top:5px;
+	height: 80%;
+	padding-bottom:0px;
+	padding-top:1px;
+	visibility: hidden;
+}
+
+.languages {
+	display: inline-block;
+	color: #fff;
+}
+
+.language {
+	display: inline-block;
+	color: #fff;
+}
+
+.language:hover {
+	color: #f0f0f0;
+}
+
+.language-fa {
+	font-size: 10px !important;
+	position: absolute;
+	top: 7px;
+}
+
+#language-ru {
+	margin-left: 14px;
+}
+
+#menu_logo_background{
+	width: 100%;
+	margin-top:10px;
+	/*margin-bottom:10px;*/
+	max-width:2000px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+
+#logo_block{
+	padding:0px;
+	padding-top:5px;
+
+}
+
+#logo_link {
+	padding:0px;
+	margin:0px;
+}
+
+#logo{
+	width:250px;
+}
+
+#menu {
+	padding:0px;
+	margin-top:10px;
+	float: right;
+}
+
+#myNavbar a{
+	font-size: 16px;
+	/* color: #2eaf51; */
+	/* font-family: "Noto Sans"; */
+	/*font-weight: 500;*/
+	padding: 10px 15px 0 15px;
+	font-weight: bold;
+	color: #404040;
+}
+
+#myNavbar .active a{
+	background-color:#f8f8f8;
+	color: #2eaf51;
+	text-decoration: underline
+}
+
+#myNavbar .donate_tab a {
+	background-color: #2cae51;
+	color: white;
+	border-radius: 5px;
+	/* padding:10px; */
+	padding: 5px 35px 5px 35px;
+	margin-top: 5px;
+}
+
+#myNavbar.active.donate_tab a {
+	text-decoration: underline;
+}
+
+.donate_tab{
+	border-radius:10px;
+}
+
+.page_title{
+	background-color:#2cae51;
+	color:white;
+	margin:0px;
+	padding:5px;
+	margin-bottom:30px;
+	font-size: 19px;
+	font-weight: bold;
+}
+
+.page_title span{
+	size:14px;
+
+}
+
+
+footer.footer_back {
+    /*padding-top: 50px;
+    padding-bottom: 50px;*/
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: #2f2f2f;
+    color: #ffffff;
+    /* height:100%; */
+	/* position:absolute; */
+	/* bottom:0; */
+	width:100%;
+}
+
+.footer {
+	width: 100%;
+	max-width:2000px;
+}
+
+#philly_footer{
+	margin-top:20px;
+}
+
+.don_amount{
+	padding-right:15px;
+}
+
+#site_logo{
+    max-height:100px;
+    max-width:100px;
+}
+
+.content {
+	min-height:500px;
+	font-size:16px;
+}
+
+
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+.start_help_back {
+    padding-top: 10px;
+    padding-bottom: 10px;
+	background-image: url("../../img/anim_site_main/start_helping.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    color: #ffffff;
+	min-height:200px;
+}
+
+.start_help {
+	display:block;
+	width:200px;
+	border:solid;
+	border-bottom-color:white;
+	padding:15px;
+	color:white;
+	margin-top:75px;
+	font-size:18px;
+}
+
+.start_help:hover {
+	color:white;
+}
+
+.what_we_do .col-sm-2.text-right img {
+	width: 100px;
+}
+
+.what_we_do .col-sm-8.text-center h2, .what_we_do .col-sm-8.text-center h3 {
+	margin-top: 0;
+	font-weight: bold;
+}
+
+.what_we_do .col-sm-8.text-center h2 {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+.give_time_text .col-sm-8.text-center h3 {
+	font-size: 22px;
+}
+
+.give_time_text h2, .what_we_do h3 {
+	margin-top: 0;
+	font-weight: bold;
+}
+
+.give_time_text h2 {
+	margin-top: 45px;
+	font-size: 24px;
+}
+
+.give_time_text h3 {
+	font-size: 20px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.red {
+	color: #ff0000;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute !important;
+}
+
+.table {
+    display: table;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.height100 {
+	height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.container-fluid {
+		padding: 0;
+	}
+
+	.give_time_text h3 {
+		padding: 0 20px 0 20px;
+		color: #333333;
+		font-weight: normal;
+	}
+
+	.what_we_do .col-sm-2.text-right img {
+		display: none;
+	}
+
+	.what_we_do .col-sm-8.text-center h3 {
+		font-weight: normal;
+		font-size: 18px;
+	}
+
+	.give_time_text h2 {
+		margin-top: 7px;
+	}
+
+	#lang_input {
+		position: absolute;
+		right: 0;
+	}
+}
+
+@media only screen {
+	#myNavbar .donate_tab a {
+		width: 130px;
+		float: right;
+	}
+
+	.project_info {
+		margin-bottom: 35px;
+	}
+}
+
+.bg-1{
+	background-color: #1abc9c; Green
+	color: #ffffff;
+	padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+.bg-3 {
+
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.img_links {
+    height:90%;
+    width: 90%;
+    max-height:300px;
+    max-width:300px;
+}
+
+
+
+
+.description{
+    max-width:1200px;
+}
+
+
+.banner_parent{
+	position: relative;
+	padding:0px;
+	top: 0;
+	left: 0;
+}
+
+.banner{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+.banner_inner {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  width: 50%;
+  height: auto;
+}
+
+.what_we_do_bckgr{
+	background-color:#2cae51;
+}
+
+.what_we_do{
+	background-color:#2cae51;
+	color: #ffffff; 
+	width:100%;
+	max-width:2000px;
+}
+
+.give_your_time{
+	background-image: url("https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/paw.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height:300px;
+}
+
+
+.give_time_text{
+	margin-top:50px;
+}
+
+.how_it_works{
+	background-color:#2cae51;
+	color:white;
+	width: 100%;
+}
+
+.section_with_icons{
+    margin-top: 30px;
+	margin-bottom:40px;
+	width: 100%;
+	max-width:2000px;
+}
+
+#how_works_title{
+	margin-bottom:45px;
+	font-weight: bold;
+}
+
+.icon_title{
+	margin-bottom:25px;
+	font-weight: bold;
+	
+}
+
+.how_works_icon{
+	/* width:20%; */
+	padding:0px;
+}
+
+.how_works_paws{
+	/* width:20%; */
+	padding:0px;
+}
+	
+	
+	
+.icons{
+    height:100%;
+    width:100%;
+    max-height:250px;
+    max-width:250px;
+
+}
+
+
+
+.arrow1, .arrow2{
+    margin-top:30px;
+    margin-bottom:30px;
+    height:40%;
+    width:50%;
+}
+
+.arrow1{
+	margin-top:150px;
+}
+
+.arrow2{
+	margin-top:30px;
+}
+
+
+.cant_help_all a{
+	color:white;
+}
+
+.icon_links3{
+	padding:0px;
+	background-image: url("../../img/anim_site_main/abt_us1.png");
+	height:300px;
+	position: relative;
+	border-radius: 25px;
+}
+
+.icon_links1 img{
+	width:100%;
+}
+
+.icon_links2 img{
+	width:100%;
+}
+
+.icon_links1 {
+	padding-left:0px;
+	padding-right:2px;
+}
+
+.icon_links2 {
+	padding-right:0px;
+	padding-left:2px;
+}
+
+
+.cant_help_all{
+	/* max-width:900px; */
+	margin-bottom:30px;
+}
+
+.abt_us{ 
+	background-image: url("../../img/anim_site_main/abt_us.png");
+	height:300px;
+}
+
+.blg{ 
+	background-image: url("../../img/anim_site_main/blog.png");
+	height:300px;
+}
+
+.classWithPad {
+	border-radius: 25px;
+}
+
+.classWithPad h4 {
+	padding-top:25%;
+	font-weight: bold;
+	font-size: 26px;
+}
+
+.cant_help_all .row {
+	margin-bottom: 10px;
+}
+
+.icon_links3 h4 {
+	position: inherit;
+	margin-top: 11%;
+	font-weight: bold;
+	font-size: 26px;
+	border: 3px solid #fff;
+	width: 20%;
+	padding: 10px 0 10px 0;
+}
+
+#cant-help-everyone-row {
+	background-color: #2f2f2f;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 20px 0 20px 0;
+}
+
+
+.cant_help_all_back h1 {
+	font-size: 26px;
+	color: #2f2f2f;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+	.arrow1 {
+		margin-top: 30px;
+	}
+
+	#cant-help-everyone-row {
+		padding: 20px 20px 20px 20px;
+	}
+
+	.classWithPad h4 {
+		padding-top: 44%;
+	}
+
+	.icon_links3 {
+		padding-top: 30%;
+	}
+
+	.icon_links3 h4 {
+		width: 66%
+	}
+
+	.section_with_icons {
+		margin-top: 0;
+	}
+
+	#how_works_title {
+		margin-bottom: 10px;
+		font-size: 24px
+	}
+
+	.arrow1 {
+		margin-top: 30px;
+	}
+
+	.how_works_paws hr {
+		display: none;
+	}
+}
+	
+	
+</style>
+
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (("0"+dt.getDate()).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()+1).slice(-2)) +":"+ (("0"+dt.getMinutes()+1).slice(-2));
+</script>		
+		
+	<link rel="stylesheet" href="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/homepage.css">
+
+		
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/js.js"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-126050872-1');
+
+		  function recaptchaCallback() {
+        		$('#submitBtn').removeAttr('disabled');
+    		  };
+		</script>
+	</head>
+	
+	<body>
+		
+		<nav class="navbar navbar-default">
+			<div class="container-fluid md-1" id="we_collected_background">
+				<div class="container md-1" id="we_collected">
+					<div class="col-sm-6 text-left" id="lang">
+						
+						<form action="/i18n/setlang/" method="post">
+							<input type="hidden" name="csrfmiddlewaretoken" value="GYbK3HxTzzRUvJIhQTGuh33PPcBPApitJGSefWMwwjfLDxvpprREVyS8gKlvAe20">
+							<input type="hidden" name="text" value="">
+							<div class="languages">
+								
+							</div>
+							<select class="form-control " name="language" id="lang_input">
+								
+								
+									
+								
+							</select>
+							<input class="btn btn-default" id="lang_button" type="submit" value="Go">
+						</form>
+					</div>
+					<div class="col-sm-6 text-right" id="collected_money">
+						
+
+						
+						<img id="vseg_sobr_paw" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/vsego_sobrano.png">We collected: <strong>$400.6</strong>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid sm-1" id="menu_logo">
+				<div class="container-fluid md-1" id="menu_logo_background">
+					<div class="col-sm-3 text-left" id="logo_block">
+						<a class="navbar-brand" href="http://127.0.0.1:8000/" id="logo_link">
+							<img id="logo" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/logo.png">
+						</a>
+					</div>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+						</button>
+					</div>					
+					<div class="col-sm-9 text-right" id="menu">
+						
+						  
+<div class="collapse navbar-collapse" id="myNavbar">
+</div>
+
+						
+					</div>
+				
+				</div>
+			</div>
+				
+				
+			<p></p>
+		  
+		</nav>
+
+
+		
+	<div class="container-fluid md-1 banner_parent">
+		<img class="banner" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/Baner_main.png">
+	</div>
+	<div class="container-fluid md-1 what_we_do_bckgr">
+		<div class="container-fluid md-1 what_we_do">
+			<div class="col-sm-2 text-right">
+				<img src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/cat_icon.png">
+			</div>
+			<div class="col-sm-8 text-center">
+				<h2>What do we do?</h2>
+				<h3>We help stray animals all around the world</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid md-1 text-center give_your_time">
+		<div class="container-fluid md-1 give_time_text">
+			<h2>
+				Donate your time
+			</h2>
+			<h3 class="container-fluid description">
+				How much time do we spend on things that do not really matter? What if we tell you that this time<br> can be converted into real money to save someone`s life?
+			</h3>
+		</div>
+	</div>
+	
+	<div class="container-fluid md-1 text-center how_it_works">
+		<div class="container md-1 section_with_icons">
+			<h2 id="how_works_title">How does it work?</h2>
+			<div class="col-sm-2 text-center how_works_icon">
+				<h4 class="icon_title">Choose a project</h4>
+				<img class="icons" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/choose_proj.png" alt="Image">
+			</div>
+            <div class="col-sm-3 text-center how_works_paws">
+				<hr size="30">
+				<img class="icons arrow1" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/paws1.png" alt="Image">
+			</div>
+            <div class="col-sm-2 text-center how_works_icon">
+                <h4 class="icon_title">Watch a video</h4>
+				<img class="icons" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/watch_video.png" alt="Image">
+			</div>
+
+            <div class="col-sm-3 text-center how_works_paws">
+				<hr size="30">
+				<img class="icons arrow2" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/paws2.png" alt="Image">
+			</div>
+            <div class="col-sm-2 text-center how_works_icon">
+                <h4 class="icon_title">Click Donate</h4>
+				<img class="icons" src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/you_helped.png" alt="Image">
+			</div>
+		</div>		
+	</div>
+	<div class="container-fluid md-1 text-center cant_help_all_back">
+		<div class="row" id="cant-help-everyone-row">
+			<div class="col-md-12">
+				<center>We can not help everyone but can inspire and grant a chance all the others!</center>
+			</div>
+		</div>
+
+		<h1>
+			ABOUT US
+		</h1>		
+		<div class="container">
+            <p><span style="font-size:16px"><span style="font-family:Verdana,Geneva,sans-serif">There are a lot of stray animals in the modern world who need help. We believe that this problem could be resolved and this starts by taking small steps. Every second of your time has a value that could be converted into real money with the help of technology. This project simplifies the donation process by allowing users to watch short ads in order to raise money for animals. Spending just a couple of minutes watching videos on this website enables&nbsp;you to make a priceless&nbsp;contribution&nbsp;and save a pets`&nbsp;life. A small contribution from each individual will have a significant impact on a dog or cat who could survive&nbsp;because of YOU! You do not need to donate your money; just go to the page -&gt; choose the project you like -&gt; and watch up to 10 videos per day on the project`s page.</span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Verdana,Geneva,sans-serif">Let’s try to make this world a little bit better.</span></span></p>
+
+
+<p><img alt="" src="https://donaddcom.s3.amazonaws.com/media/uploads/2019/04/15/cat-in-picture.jpg" style="border-radius:2%; display:block; margin-left:auto; margin-right:auto; width:65%"></p>
+        </div>
+	</div>
+
+
+
+			<footer class="container-fluid bg-4 text-center footer_back">
+				<div class="container md-1 footer">
+					<div class="row">
+						<div class="col-sm-4" id="philly_footer">
+							<p>Philadelphia 2019</p>
+						</div>
+						<div class="col-sm-4">
+							<a href="https://www.facebook.com/donaddcom">
+								<img src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/FB_icon.png">
+							</a>
+							<a href="https://www.instagram.com/donaddcom/">
+								<img src="https://donaddcom.s3.amazonaws.com/staticfiles/img/anim_site_main/inst_icon.png">
+							</a>
+							
+						</div>
+						<div class="col-sm-4">
+							<p>
+								Email: donaddcom@gmail.com
+								<br>
+								Phone: +1(267)586-9243
+								<br>
+								<a href="http://127.0.0.1:8000/www.linkedin.com/in/s-timshin/">
+									LINKED IN
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		
+	
+
+</body></html>

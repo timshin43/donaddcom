@@ -121,7 +121,7 @@ msgstr "Мы не можем помочь всем, но можем дать н�
 msgid "EXPLORE MORE"
 msgstr "УЗНАЙТЕ БОЛЬШЕ"
 
-#: .\templates\anim_site_main\homepage.html:59
+#: .\templates\anim_site_main\homepage.html:76
 #: .\templates\includes\tabs.html:5
 msgid "ABOUT US"
 msgstr "О НАС"
@@ -137,7 +137,7 @@ msgid "DONATE"
 msgstr "ДЕЙСТВОВАТЬ!"
 
 #: .\templates\blog\blog_main.html:21
-msgid "BLOG"
+msgid "Blog"
 msgstr "Блог"
 
 #: .\templates\blog\blog_main.html:24
