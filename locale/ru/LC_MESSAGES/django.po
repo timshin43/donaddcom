@@ -127,7 +127,7 @@ msgstr "О НАС"
 
 #: .\templates\includes\tabs.html:5
 msgid "About Us"
-msgstr "О НАС"
+msgstr "О нас"
 
 #: .\templates\anim_site_main\homepage.html:65
 #: .\templates\includes\tabs.html:27
