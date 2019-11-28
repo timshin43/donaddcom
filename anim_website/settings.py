@@ -190,7 +190,7 @@ SECURE_SSL_REDIRECT = config('SECURE_CONN', default=False, cast=bool)
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION) #production
 
 
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' #uncomment for production
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' #uncomment for production
 
 
 STATICFILES_DIRS = [
